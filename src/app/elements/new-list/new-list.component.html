@@ -1,0 +1,17 @@
+
+<div class="card_" [routerLink]="['/news-detail',  newlists.PostID]" [ngClass]="{'pattern-3' : related}">
+    <div class="hover-img">
+        <img src="assets/images/no-image.png" *ngIf="!coverphoto " class="img-fluid">
+        <img [src]="linkUrl +  coverphoto  | safe:'url'" *ngIf="coverphoto" class="img-fluid">
+    </div>
+    <div class="card-body">
+        <h2 class="para">{{newlists.PostTitle | slice:0:80}}</h2>
+        <p class="new-text"> {{shareService.DateChange(newlists.PostOn)}}
+            
+            {{shareService.DateChange(newlists.PostExpire)}}
+        </p>
+        <p class="desc"> {{newlists.Body | slice:0:80}}
+            <span *ngIf="newlists.Body.length > 80">...</span>
+        </p>
+    </div>
+</div>

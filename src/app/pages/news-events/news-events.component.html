@@ -1,0 +1,32 @@
+<div class="page-container">
+  <section
+    class="page_banner text-center bg-img theme-overlay-blue-dark pt-5 pb-5"
+    data-overlay-dark="7">
+    <div class="container decoration_wrap">
+      <h1 class="page_title">{{ 'news.news-event' | translate }}</h1>
+      <ul class="breadcrumb_nav unordered_list_center">
+        <li><a href="#">{{ 'footer.home' | translate }}</a></li>
+        <li>/</li>
+        <li>{{ 'news.news-event' | translate }}</li>
+      </ul>
+    </div>
+  </section>
+  <section class="Latest-section section-body " style="padding: 0 !important;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4"
+          style="visibility: visible; animation-delay: 200ms; animation-name: fadeIn;"
+          *ngFor="let news of newlists">
+          <app-new-list [newlists]="news">
+          </app-new-list>
+        </div>
+      </div>
+      <div class="row">
+        <div *ngIf="newlists?.length == 0" class="no-data">
+          <img src="assets/images/not-found.jpg" /> No News and Events found!
+        </div>
+      </div>
+    </div>
+
+  </section>
+ 

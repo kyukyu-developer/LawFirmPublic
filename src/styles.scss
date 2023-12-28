@@ -1,0 +1,45 @@
+@import "../src/assets/theme/custom.scss";
+@import "../src/assets/theme/global.scss";
+@import "../src/assets/theme/variable.scss";
+
+p{
+    font-size:13px;
+}
+
+h3{
+    font-size:22px;
+}
+
+.owl-carousel {
+	position: relative;
+	height: 100%;
+	
+	// div:not(.owl-controls) {
+	// 	height: 100%;
+	// }
+	
+	.owl-slide {
+		background-image: url('https://images.unsplash.com/photo-1437915015400-137312b61975?fit=crop&fm=jpg&h=800&q=80&w=1200');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+	
+	div.owl--text {
+		position: absolute;
+		bottom: 4em;
+		left: 2em;
+		width: 20em;
+		height: 8em;
+		padding: 1em;
+		background: rgba(255, 255, 255, .5);
+		border-radius: 4px;
+	}
+	
+}
+
+@media only screen and (max-width: 768px) {
+	.owl-carousel{
+		height: 400px;
+	}
+}

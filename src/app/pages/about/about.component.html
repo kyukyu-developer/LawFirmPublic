@@ -1,0 +1,252 @@
+<div class="page-container">
+  <div class="">
+    <section class="page_banner text-center bg-img theme-overlay-blue-dark pt-5 pb-5" data-overlay-dark="7">
+      <div class="decoration_wrap">
+        <h1 class="page_title">ABOUT US</h1>
+        <ul class="breadcrumb_nav unordered_list_center">
+          <li><a href="#">Home</a></li>
+          <li><img src="assets/images/airrow.png" alt=""></li>
+          <li>About Us</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+  <br><br><br><br>
+  <div class="container">
+
+    <div class="row">
+      <!-- <div class="col-md-6" data-aos="zoom-out" data-aos-duration="30000"> -->
+      <div class="col-md-6">
+        <div class="law-video" #target2>
+          <img width="596" height="400" src="assets/images/aboutus.jpg" class="attachment-full" alt>
+        </div>
+        <div class="d-flex little-txt">
+          <!-- <div class="custom-txt">
+                        <p></p>
+                    </div>
+                    <div >
+                        <img src="assets/images/vertical-line.png" alt="">
+                    </div>-->
+          <div class="custom-txt">
+            <h5>The Royal Law Firm</h5>
+            <p>09 963 754111</p>
+          </div>
+          <div>
+            <img src="assets/images/vertical-line.png" alt="">
+          </div>
+          <div class="custom-txt">
+            <h5>Tharaphu Gas</h5>
+            <p>09 430 57708</p>
+          </div>
+          <div>
+            <img src="assets/images/vertical-line.png" alt="">
+          </div>
+          <div class="custom-txt">
+            <h5>Royal Estate</h5>
+            <p>09 430 57708</p>
+          </div>
+        </div>
+
+      </div>
+      <!-- data-aos="zoom-out" data-aos-duration="50000" -->
+      <div class="col-md-6">
+        <div class="home-about">
+
+          <h3>ABOUT US</h3>
+          <p class="middle-title">Empowering Success: Your Comprehensive Partner in Law</p>
+          <p>Welcome to Burma Consultancy Group, where integrity meets expertise in the pursuit of justice. Established
+            in [Year], we have been dedicated to providing exceptional legal services tailored to meet the unique needs
+            of our clients. BCG stands for Brilliance, Commitment, and Guidance – principles that define our approach to
+            the practice of law.</p>
+
+          <br />
+
+          <div class="text-center">
+            <nav class="tabs">
+              <div class="selector"></div>
+              <a (click)="tabClick('mission')" [ngClass]="{'active' : mission}" style="border-radius: 30px 0 0 0;">Our
+                Mission</a>
+              <a style="border-radius: 0 0 30px 0;" (click)="tabClick('vision')" [ngClass]="{'active' : vision}">Our
+                Vision</a>
+
+              <!-- <a (click)="tabClick('value')" style="border-radius: 0 0 30px 0;" [ngClass]="{'active' : value}">Our Value</a> -->
+            </nav>
+            <p *ngIf="mission" class="text-white" style="margin-top:15px;text-align:justify;">
+              At Burma Consultancy Group, our mission is to deliver exceptional legal counsel and representation with
+              unwavering dedication to our clients' success. We commit ourselves to upholding the highest standards of
+              integrity, professionalism, and client advocacy. Through a client-centric approach, we aim to provide
+              innovative and tailored legal solutions that empower individuals and businesses to navigate the
+              complexities of the legal system confidently.
+            </p>
+            <p *ngIf="vision" class="text-white" style="margin-top:15px;text-align:justify;">
+              Burma Consultancy Group envisions a future where the pursuit of justice is not only a legal obligation but
+              a transformative force that shapes a fair and inclusive society. Our vision extends beyond legal practice;
+              we aspire to be catalysts for positive change, influencing legal norms, and fostering a culture where
+              everyone has access to transparent, ethical, and innovative legal solutions. By embracing collaboration,
+              diversity, and continuous improvement, we aim to redefine the boundaries of legal excellence and
+              contribute to a world where the rule of law is synonymous with justice, equality, and empowerment.
+            </p>
+
+            <!-- <p *ngIf="value" class="text-white" style="margin-top:15px;">
+                        Value. All the Lorem Ipsum generators on the Internet tend to predefined chunks as necessary, making this the first true generator on net. Uses a dictionary of over always true latin words.
+                      </p>      -->
+          </div>
+          <div>
+          </div>
+
+
+          <div class="elementor-widget-container">
+            <div class="section-title-wrapper call-us-team">
+              <div class="title-wrap">
+                <div class="sub-title">
+                  <span class="subtitle-dots">At our Burma Consultancy Group,</span>
+                </div>
+                <h4 class="section-title">Your satisfaction is our priority.</h4>
+              </div><!-- .title-wrap -->
+              <div class="section-description">
+                <p class="section-content">
+                  <a href="tel:+5284567592" class="cea-button-link">
+                    <!-- <span class="cea-button-text">
+                                            <i class="bi bi-telephone-fill me-1"></i> CALL US</span> -->
+                    <span class="cea-button-num">NorthDagon Tsp, 1341 Bohmu Ba Htoo Rd, Yangon 11421.</span>
+
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <br><br><br><br><br>
+  <div class="container" style="position: relative;margin-bottom:350px;">
+    <div class="bg">
+      <section class="slider">
+        <h3 class="text-center" style="margin-bottom:50px;">Our Legal Team</h3>
+        <owl-carousel-o [options]="customOptions" id="service-slider">
+
+          <ng-template carouselSlide *ngFor="let item of member">
+            <div class="why-us-card">
+              <p [innerHTML]="item.description"></p>
+              <div class="work-post-gal">
+                <div class="snip1192">
+                  <blockquote>
+                    <img src="assets/images/no-image.png" *ngIf="!item.image " height="350px"
+                      style="object-fit: cover;border-radius:50px 0 0 0;">
+                    <img [src]="linkUrl +  item.image  | safe:'url'" *ngIf="item.image" height="350px"
+                      style="object-fit: cover;border-radius:50px 0 0 0;">
+
+                    <!-- <img src="https://wordpress.zozothemes.com/igual/wp-content/uploads/sites/6/elementor/thumbs/pexels-pavel-danilyuk-8112160-1-q26vvb79i6vubi7lsllzzbi1jn2ssbm0tigfon0fi4.jpg"
+                                        alt="reviwe" height="250px" style="object-fit: cover;border-radius:50px 0 0 0;"> -->
+                  </blockquote>
+                </div>
+                <!-- <div class="social-media">
+                                <div><i class="fa fa-facebook" aria-hidden="true"></i><br>Facebook</div>
+                                <div><i class="fa fa-instagram" aria-hidden="true"></i><br>Instagram</div>
+                                <div><i class="fa fa-twitter" aria-hidden="true"></i><br>Twitter</div>
+                            </div> -->
+                <div class="content">
+                  <h4>{{item.name}}</h4>
+                  <p class="mb-0">{{item.degree}}</p>
+                  <p class="mb-0">{{item.position}}</p>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </owl-carousel-o>
+      </section>
+    </div>
+
+  </div>
+  <div *ngFor="let item of aboutinfo; let i = index;" class="position-relative">
+    <div *ngIf="i % 2 === 0; else oddIndex">
+      <div class="container law">
+        <div class="row justify-content-left about-law d-flex position-relative" style="padding: 60px 0;">
+          <div class="col-md-6" style="padding-top:40px;">
+            <h2 class="small-title text-white">WELCOME TO</h2>
+            <h2 class="text-white" style="margin-bottom:30px;">{{item.title}}</h2>
+            <!-- <h3>NAME LAWYERS</h3> -->
+            <p [innerHTML]="item.description"></p>
+            <div *ngIf="item.contactInfo">
+              <h3 style="color: #B8967E;font-size:18px;">Your satisfaction is our priority</h3>
+              <p class="section-content">
+                <a href="tel:+5284567592" class="cea-button-link">
+                  <span class="cea-button-text"><i class="bi bi-telephone-fill me-1"></i> CALL US</span>
+                  <span class="cea-button-num">{{item.contactInfo}}</span></a>
+              </p>
+            </div>
+
+          </div>
+          <div class="col-md-6">
+            <img src="assets/images/law3.png" *ngIf="!item.image " class="img-fluid attachment-full">
+            <!-- <div class="position-relative" *ngIf="item.image" style="height: 400px;"> -->
+            <div style="position: relative;">
+              <div class="box one"></div>
+              <div class="box two"></div>
+              <div class="box three" [style.background-image]="'url(' + linkUrl + item.image + ')'"></div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <ng-template #oddIndex>
+      <div class="container law" style="margin-bottom: 100px;">
+
+        <div class="row justify-content-left about-law d-flex" style="padding: 60px 0;">
+          <div class="col-md-6">
+            <img src="assets/images/law3.png" *ngIf="!item.image " class="img-fluid attachment-full">
+            <div class="position-relative" *ngIf="item.image" style="height: 350px;">
+              <div class="box one">
+              </div>
+              <div class="box two"></div>
+              <div class="box three" [style.background-image]="'url(' + linkUrl + item.image + ')'"></div>
+            </div>
+          </div>
+          <div class="col-md-6" style="padding-left: 80px;padding-top:40px;">
+            <h2 class="small-title text-white">WELCOME TO</h2>
+            <h2 class="text-white" style="margin-bottom:30px;">{{item.title}}</h2>
+            <!-- <h3>NAME LAWYERS</h3> -->
+            <p [innerHTML]="item.description"></p>
+            <div *ngIf="item.contactInfo" class="text-center" style="margin-top:65px;">
+              <h3 style="color: #B8967E;font-size:18px;">Your satisfaction is our priority</h3>
+              <!-- <button type="submit" class="custom-btn mt-2"><span>{{item.contactInfo}}</span></button> -->
+              <p class="section-content">
+                <a href="tel:+5284567592" class="cea-button-link">
+                  <span class="cea-button-text"><i class="bi bi-telephone-fill me-1"></i> CALL US</span>
+                  <span class="cea-button-num">{{item.contactInfo}}</span></a>
+              </p>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+
+    </ng-template>
+  </div>
+
+</div>
+
+<br><br><br><br>
+<section class="container">
+  <div class="row phonecontact">
+    <div class="col-md-9">
+      <p>
+        Reach out to us via phone, email, or visit our office, and let us guide you through a seamless experience. At
+        our Burma Consultancy Group, your satisfaction is our priority, and we look forward to hearing from you soon.
+      </p>
+    </div>
+    <div class="col-md-3 text-center">
+      <a class="custom-btn" [owlRouterLink]="'/contact-us'">
+        CONTACT US NOW
+      </a>
+    </div>
+  </div>
+</section>

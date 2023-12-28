@@ -1,0 +1,41 @@
+.accordion-header {
+  cursor: pointer;
+}
+
+.accordion-content {
+  display: none;
+}
+
+.accordion-content.show {
+  display: block;
+}
+
+.accordion-button {
+  display: flex;
+  align-items: center;
+  background-color: #bd9d4f;
+  color: #fff;
+}
+
+.accordion-item {
+  margin: 10px;
+  margin-right: 0px;
+  margin-left: 0px;
+  background-color: #7a7a7a45;
+}
+
+.accordion-button.active {
+  // Add styles for active accordion button
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  h4 {
+    font-size: 16px !important;
+  }
+}

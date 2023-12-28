@@ -1,0 +1,109 @@
+{
+    "navbar": {
+        "home": "Home",
+        "product": "Product",
+        "promotion": "Promotions",
+        "careline": "Careline",
+        "contactus": "Contact Us",
+        "news&events": "News & Events"
+
+    },
+    "footer": {
+        "contact": "Connect with us",
+        "home": "Home",
+        "product-page": "Product",
+        "promotions": "Promotions",
+        "careline": "Careline",
+        "contact-us": "Contact Us",
+        "links": "Links",
+        "social-links": "Social Media Links",
+        "slogan": "Gaullac Mom and Gaullac-3, Parental love for babies."
+    },
+    "home": {
+        "title": "This is title",
+        "faqTitle": "Frequently Asked Questions",
+        "product": "Our Products",
+        "highlight": "Highlight FAQS",
+        "promotion": "Latest Promotions",
+        "detail-info": "See more",
+        "home-title": "Find The Right Product",
+        "home-text": "For Moms & Babies",
+        "paragraph": "Discover our premium milk powder product, specially formulated to meet the nutritional needs of both moms and babies, ensuring a healthy start and nurturing growth.",
+        "home-button": "Learn More",
+        "testimonialTitle": "Our Testimonials",
+        "slogan-title" :"Pregnant and lactating mothers should choose Gaullac Mom / Gaullac 3 to have intelligent and healthy babies.",
+        "slogan-paragraph":"Gaullac MOM provides required nutrients for  pregnant and lactating mothers.",
+        "slogan-paragraph-one":"Gaullac-3 is the nutritional supplement for children above 2 years of age."
+
+    },
+    "careline": {
+        "faqTitle": "Frequently Asked Questions",
+        "carelineTitle": "Contact Careline",
+        "carelinePhone": "+959 974 151 922",
+        "contact": "Connect with messenger",
+        "message": "Explore with frequently asks questions",
+        "error":"No Frequently Ask Question!"
+    },
+    "product": {
+        "detail-info": "See more",
+        "description": "365Brepro+ is the main advantage of Gaullac-3. The term '365' represents its unique combination of 3 types of prebiotics (FOS, GOS, Polyfructose), 6 types of core brain nutrients (DHA, ARA, Linoleic Acid, a-linolenic acid, Taurine, Choline), and 5 types of nucleotides (AMP, GMP, IMP, UMP, CMP), making it an excellent choice for babies.",
+        "description2":"Gaullac-3 is considered the best baby formula in Myanmar as it contains all 3 essential prebiotics, which are crucial for babies. These prebiotics promote healthy digestion, improve bowel movements, and enhance overall stomach health for babies.",
+        "description3":"Moreover, Gaullac-3 also provides 6 core brain nutrients that support brain development, vision, and intelligence. Additionally, Gaullac-3 incorporates five important nucleotides that help strengthen the immune system of babies. Furthermore, it contains all 45 vital types of vitamins and nutrients necessary for the overall growth and well-being of babies.",
+        "description4":"Gaullac Mom provides essential daily vitamins (A, B, C, D, E, K) and important nutrients like Folic Acid, Iron, and Zinc that pregnant and lactating mothers require. ",
+        "description5":"By consuming it during pregnancy, mothers can conveniently obtain their daily nutrient needs, promoting their overall health.",
+        "description6":"For breastfeeding mothers, Gaullac Mom supports the production of nutritious breast milk for their babies."
+    },
+    "product-detail": {
+        "buynow": "Buy Now",
+        "paragraph": "Gaullac Mom/ Gaullac 3, made by Synutra France International, is a top-quality baby formula in Myanmar. Enriched with essential Prebiotic (3), it greatly benefits babies by enhancing digestion, promoting healthy stomachs, and improving bowel movements."
+    },
+    "contact": {
+        "contact-info": "Contact Information",
+        "connect": "Connect with us",
+        "name": "Name",
+        "email": "Email",
+        "Message": "Message",
+        "messageTxt": "Write your message ...",
+        "send": "Send Message",
+        "contact-us": "Contact Us",
+        "contact-name":"Name is required",
+        "contact-email":"Email is required",
+         "contact-message":"Message is required",
+        "invalid-email":"Email Format is invalid"
+
+
+    },
+    "survey-form":{
+        "name":"Name",
+        "phone-number":"Phone Number",
+        "type-person": "Buy Gaullac For",
+        "Mother":"Mother",
+        "Baby":"Child",
+        "note":"*Notice :",
+        "note-text":" *Can be consumed from age (2) and above. ",
+        "Address":"Address",
+        "message-address":"Write your Address",
+        "month":"Pregnant Months",
+        "Age":"Age",
+        "submit":"Submit",
+        "duration":"duration is required",
+        "address-survey":"address is required",
+        "name-one":"Name is required",
+        "phone-one":"Phone No is required",
+        "person":"person is required",
+        "survey":"Survey Form",
+        "agree":"The information collected is for the purpose of the Survey only and will be kept confidential."
+
+
+    },
+    "promotion":{
+        "error":"No Promtion found!"
+    },
+    "news":{
+        "news-event":"News & Events"
+
+
+    }
+
+
+}

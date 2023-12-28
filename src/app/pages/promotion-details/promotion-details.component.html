@@ -1,0 +1,66 @@
+<div class="page-container">
+    <section class="page_banner text-center bg-img theme-overlay-blue-dark pt-5 pb-5" data-overlay-dark="7">
+        <div class="container decoration_wrap">
+            <h1 class="page_title">Promotion Detail</h1>
+            <ul class="breadcrumb_nav unordered_list_center">
+                <li><a href="#">Home</a></li>
+                <li>/</li>
+                <li>Promotions</li>
+                <li>/</li>
+                <li>{{singlePromotionData?.PostTitle?.substring(0,30)}} <span
+                        *ngIf="singlePromotionData?.PostTitle?.length >= 30">...</span> </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="promotion-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <owl-carousel-o [options]="customOptions" id="new_slide">
+                        <ng-template carouselSlide *ngFor="let new_images of
+                        promoimgList;let i=index">
+                            <div class="work-post-gal" (click)="openModal()">
+                                <div class="left-img">
+                                    <img [src]="linkUrl + new_images" class="img-fluid"
+                                        *ngIf="new_images != null || new_images != ''" (click)="imgClick(i)">
+                                    <img src="assets/images/no-image.png"
+                                        *ngIf="new_images == null || new_images == '' || new_images.length == 0"
+                                        class="img-fluid">
+                                </div>
+                            </div>
+                        </ng-template>
+                    </owl-carousel-o>
+                    <div class="left-img" *ngIf="promoimgList.length == 0">
+                        <img src="assets/images/no-image.png">
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md-7">
+                    <h3 class="title_"> {{singlePromotionData.PostTitle}} </h3>
+                    <p class="new-text"> {{shareService.DateChange2(postOn)}} <span
+                            *ngIf="shareService.DateChange2(expireOn) != ''">-</span>
+                        {{shareService.DateChange2(expireOn)}}
+                    </p>
+                    <p [innerHTML]="singlePromotionData.Body" class="desc"></p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section class="promotion-sec" *ngIf="promotionData?.length != 0">
+        <div class="container">
+            <h2 class="primary-title">{{ 'Related Promotions' | translate }}</h2>
+            <br>
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-3" *ngFor="let promotion of promotionData | slice:0:4">
+                    <app-promotion-card [promotionData]="promotion" [related]="true"></app-promotion-card>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<br><br>
+<app-promotion-modal *ngIf="isModalOpen" (closeModalEvent)="closeModal()" [promoimgList]="promoimgList"
+    [currentImgIndex]="currentImageIndex"></app-promotion-modal>

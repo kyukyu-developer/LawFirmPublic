@@ -1,0 +1,130 @@
+.theme-overlay-blue-dark[data-overlay-dark]:before {
+    background: rgba(39, 38, 30, 0.7);
+}
+
+[data-overlay-dark="7"]:before,
+[data-overlay-light="7"]:before {
+    opacity: 0.5;
+}
+
+[data-overlay-dark]:before,
+[data-overlay-light]:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+[data-overlay-dark],
+[data-overlay-light] {
+    position: relative;
+}
+
+.decoration_wrap {
+    z-index: 1;
+    position: relative;
+}
+
+.about {
+    margin: 50px 0;
+}
+
+.img-bg {
+    background-image: url "(/assets/images/bg-image.jpg)";
+}
+
+.img-sec {
+    width: 380px;
+    position: relative;
+    left: -9px;
+    margin-bottom: 20px;
+}
+
+.img-fluid {
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+.contact-us {
+    border: 1px solid #7bb3fc;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 123.6%;
+    color: #ffffff;
+    background: #045096;
+    padding: 10px 20px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: flex;
+    margin: auto;
+}
+
+.btn-primary {
+    background-color: #012d96;
+}
+
+.card-title,
+.card-text {
+    color: #000;
+    font-size: 15px;
+}
+
+.para {
+    line-height: 35px;
+    font-size: 15px;
+    color: #000;
+    text-align: justify;
+}
+
+.para1 {
+    line-height: 35px;
+    font-size: 15px;
+    color: #000;
+    text-align: justify;
+    margin-top: -7px;
+}
+
+@media only screen and (max-width: 768px) {
+    .img-fluid {
+        width: 100%;
+        border-radius: 10px;
+    }
+    .contact-us {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    // #collapse1{
+    //   overflow-y:auto;
+    //   overflow-x:auto;
+    //   height:200px;
+    // }
+}
+
+.custom-tab.active {
+    background: transparent !important;
+    color: rgb(8, 3, 3) !important;
+    border-bottom: 2px solid #045096 !important;
+    border-radius: 0px !important;
+}
+
+.nav>li>a.active {
+    border-bottom: 2px solid rgb(8, 3, 3) !important;
+}
+
+.tab-section {
+    margin-top: 40px;
+}
+
+.table-sec {
+    padding-top: 35px;
+}
+
+tbody {
+    max-height: 10vh;
+    overflow: auto;
+}

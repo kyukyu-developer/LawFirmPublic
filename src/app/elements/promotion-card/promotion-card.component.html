@@ -1,0 +1,16 @@
+<div class="card_" [routerLink]="['/promotion-detail/',  promotionData.PostID]" [ngClass]="{'pattern-3' : related}">
+    <div class="hover-img">
+        <img src="assets/images/no-image.png" *ngIf="!coverphoto " class="img-fluid">
+        <img [src]="linkUrl +  coverphoto  | safe:'url'" *ngIf="coverphoto" class="img-fluid">
+    </div>
+    <div class="card-body">
+        <h2 class="para">{{promotionData.PostTitle | slice:0:80}}</h2>
+        <p class="new-text"> {{shareService.DateChange(promotionData.PostOn)}}
+            <span *ngIf="shareService.DateChange(promotionData.PostExpire) != ''">-</span>
+            {{shareService.DateChange(promotionData.PostExpire)}}
+        </p>
+        <p class="desc"> {{promotionData.Body | slice:0:80}}
+            <span *ngIf="promotionData.Body.length > 80">...</span>
+        </p>
+    </div>
+</div>

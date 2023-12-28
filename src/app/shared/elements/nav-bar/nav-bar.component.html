@@ -1,0 +1,116 @@
+
+<div class="nav-sidebar-background" *ngIf="sidebar">
+</div>
+<div class="menu-wrapper" [ngStyle]="{ 'left':sidebar ? '0px' : '-65vh' }">
+    <div class="mobile-menu-container">
+        <!-- <div><button class="mobile-signin-btn primary-btn w-150" *ngIf="!account" (click)="showSigninModal( 'login-modal') ">{{'login.login_t' | translate}}</button></div> -->
+        <div class="w-100" style="text-align: center;">
+            <p [ngClass]="{ 'mobile-active': routeLink == ''}" (click)="navigate('','') ">{{ 'navbar.home' | translate
+                }}
+            </p>
+        </div>
+        <!-- <div *ngFor="let menu of menuList" class="w-100" style="text-align: center;">
+            <p [ngClass]="{ 'mobile-active': routeLink == '/' + menu.route}"
+                (click)="navigate( menu.route, menu.parameter)">{{ menu.title | translate }}</p>
+        </div> -->
+        <div class="w-100" style="text-align: center;" [owlRouterLink]="'/about-us'" [ngClass]="{ 'active': routeLink.includes('about-us')}">
+            <p>About Us</p>
+        </div>
+        <div class="w-100" style="text-align: center;">
+            <p>Services</p>
+            <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li *ngFor="let service of serviceGroup">
+                  <a class="dropdown-item" [owlRouterLink]="['/service-detail',  service.id]">{{service.title_en}}</a></li>
+              </ul> -->
+        </div>
+        <div class="w-100" style="text-align: center;" [owlRouterLink]="'/packages'" [ngClass]="{ 'active': routeLink.includes('packages')}">
+            <p>Packages</p>
+        </div>
+        <div class="w-100" style="text-align: center;" [owlRouterLink]="'/contact'" [ngClass]="{ 'active': routeLink.includes('contact')}">
+            <p>Contact Us</p>
+        </div>
+
+       
+    </div>
+</div>
+
+<div class="nav" id="mainNav">
+   
+    <div class="container">
+        <div class="topbar">
+            <div>
+                Mon - Fri 9:00 am - 5:00 pm
+            </div>
+            <div>
+                <p class="mb-1">info@yourdomain.com</p>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between">
+            <div class="nav-header">
+            
+                <span class="menu-container " (click)="showSideBar() "><button class="burger-menu "
+                        *ngIf="!routeLink.includes( 'admin') "><i class="fa fa-bars "></i></button></span>
+                <span class="admin-logo-left " *ngIf="routeLink.includes('admin')"></span>
+                <div class="nav-title" (click)="navigate('','') ">
+                    <img src="assets/images/logo-.png" class="logo" id="logo">
+                </div>
+    
+            </div>
+    
+            <div class="nav-links">
+                <div>
+                    <span class="route-links">
+                        <nav class="navbar navbar-expand-lg">
+                    
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                              <ul class="navbar-nav">
+                                <li class="nav-item">
+                                  <a class="nav-link" [owlRouterLink]="''" [ngClass]="{ 'active': !routeLink.includes('/') }">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li ></li>
+                                <li class="nav-item">
+                                  <a class="nav-link" [owlRouterLink]="'/about-us'" [ngClass]="{ 'active': routeLink.includes('/about-us')}">About Us</a>
+                                </li>
+                                <li class="nav-item dropdown mx-md-2">
+                                    <a (click)="showDropDownOne()" class="nav-link dropdown-toggle" id="navbarDropdown"
+                                      role="button" data-bs-toggle="dropdown" aria-expanded="false" [ngClass]="{ 'active': routeLink.includes('/service-detail')}">
+                                      Services
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <li *ngFor="let service of serviceGroup">
+                                        <a class="dropdown-item" [owlRouterLink]="['service-detail', service.id ]">{{service.title_en}}</a></li>
+                                        <!-- <li><a class="dropdown-item" [owlRouterLink]="'/service-detail/1'">The Royal Law Firm</a></li>
+                                        <li><a class="dropdown-item" [owlRouterLink]="'/service-detail/2'">Tharaphu Gas</a></li>
+                                        <li><a class="dropdown-item" [owlRouterLink]="'/service-detail/3'">Real Estate</a></li> -->
+                                    </ul>
+                                  </li>
+                                  <li class="nav-item"><a class="nav-link" [owlRouterLink]="'/packages'" [ngClass]="{ 'active': routeLink.includes('/packages')}">Packages</a></li>
+                                <li class="nav-item">
+                                  <a class="nav-link" [owlRouterLink]="'/contact-us'" [ngClass]="{ 'active': routeLink.includes('/contact')}">Contact</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </nav>
+                       
+                      
+                        <span class="social">
+                            <div class="social-media">
+                                <div><i class="fa fa-facebook" aria-hidden="true"></i><br>Facebook</div>
+                                <div><i class="fa fa-instagram" aria-hidden="true"></i><br>Instagram</div>
+                                <div><i class="fa fa-twitter" aria-hidden="true"></i><br>Twitter</div>
+                            </div>
+                        </span>
+    
+    
+                    </span>
+                </div>
+              
+            </div>
+        </div>
+       
+    </div>
+
+</div>

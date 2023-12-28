@@ -1,0 +1,39 @@
+<div class="page-container">
+    <section class="page_banner text-center bg-img theme-overlay-blue-dark pt-5 pb-5" data-overlay-dark="7">
+        <div class="container decoration_wrap">
+            <h1 class="page_title">{{ 'footer.promotions' | translate }}</h1>
+            <ul class="breadcrumb_nav unordered_list_center">
+                <li><a href="#">{{ 'footer.home' | translate }}</a></li>
+                <li>/</li>
+                <li>{{ 'footer.promotions' | translate }}</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="promotion-sec">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4" *ngFor="let promotion of promotionData">
+                    <app-promotion-card [promotionData]="promotion"></app-promotion-card>
+                    <!-- <div class="card_">
+                        <div class="hover-img">
+                            <img src="{{promotion.imageUrl}}" alt="" class="img-fluid ">
+                        </div>
+                        <div class="card-body">
+                            <h2 class="para">{{promotion.title}}</h2>
+                            <p class="new-text"> {{promotion.fromDate}} - {{promotion.toDate}} </p>
+                            <p class="desc"> {{promotion.desc | slice:0:80}}
+                                <span *ngIf="promotion.desc.length > 80">...</span>
+                            </p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="row">
+                <div *ngIf="promotionData?.length == 0 && hide" class="no-data">
+                    <img src="assets/images/not-found.jpg" /> {{ 'promotion.error' | translate }}
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,175 @@
+<!-- <section class="container">
+    <div class="row phonecontact">
+            <div class="col-md-9">
+                <p>
+                    Our Lawyers will also represent you in civil litigation cases such as divorce.
+                </p>
+            </div>
+            <div class="col-md-3 text-center">
+                <button class="custom-btn fill">
+                    CONTACT US NOW
+                </button>
+            </div>
+        </div>
+</section>
+<br> -->
+<footer class="footer2 pt-5 pb-5">
+    <div class="container">
+        <div class="row text-white">
+            <div class="col-sm-6 col-lg-3 mt-1-9 wow fadeIn text-white"
+                data-wow-delay="200ms">
+                <p>A LAW FIRM AGENCY</p>
+                <h3 style="color: #bd9d4f;
+                                    font-size: 1.5rem;
+                                    margin-bottom: 25px;">LEGAL CARE</h3>
+                <p style="margin-top:30px;">
+                    <img src="assets/images/location.png" class="image-icon1"
+                        width="20px">&nbsp;&nbsp;&nbsp;
+                        NorthDagon Tsp, 1341 Bohmu Ba Htoo Rd, Yangon 11421.
+                </p>
+                <h5 class="phone">The Royal Law Firm</h5>
+                <p style="margin-top:18px;">
+                    <img src="assets/images/phone.png" class="image-icon1"
+                        width="15px">&nbsp;&nbsp;&nbsp;
+                    <a href="tel:+959 974 151 922" class="link">
+                        09 963 754111</a>
+                </p>
+                <h5 class="phone">Tharaphu Gas</h5>
+                <p style="margin-top:18px;">
+                    <img src="assets/images/phone.png" class="image-icon1"
+                        width="15px">&nbsp;&nbsp;&nbsp;
+                    <a href="tel:+959 974 151 922" class="link">
+                        09 430 57708</a>
+                </p>
+                <h5 class="phone">Royal Estate</h5>
+                <p style="margin-top:18px;">
+                    <img src="assets/images/phone.png" class="image-icon1"
+                        width="15px">&nbsp;&nbsp;&nbsp;
+                    <a href="tel:+959 974 151 922" class="link">
+                        09 430 57708</a>
+                </p>
+                <!-- <p style="margin-top:30px;">
+                    <img src="assets/images/mail.png" class="image-icon1"
+                        width="20px">&nbsp;&nbsp;&nbsp;
+                    info@domain.com
+                </p> -->
+
+                <a href="https://www.facebook.com/gaullac.myanmar/"
+                    class="social-icon" target="_blank">
+                    <img src="assets/icon/facebook.png" class="image-icon"
+                        width="30px"></a>
+                <a
+                    href="https://www.youtube.com/channel/UCwGpxh_4DteQm6JUsv2nZfA"
+                    class="social-icon" target="_blank">
+                    <img src="assets/icon/youtube.png" class="image-icon"
+                        width="30px"></a>
+            </div>
+            <div class="f-link col-sm-6 col-lg-2 mt-1-9 wow fadeIn"
+                data-wow-delay="350ms"
+                style="visibility: visible; animation-delay: 350ms; animation-name: fadeIn;">
+                <p>OUR LEGAL</p>
+                <h3>Services</h3>
+                <a *ngFor="let service of serviceGroup">
+                    <p class="footer-link" [owlRouterLink]="['/service-detail',  service.id ]">
+                        <img src="assets/images/airrow.png" alt="">{{service.title_en}}</p>
+                </a>
+                <!-- <a>
+                    <p class="footer-link">
+                        <img src="assets/images/airrow.png" alt="">Business Law</p>
+                </a>
+                <a>
+                    <p class="footer-link">
+                        <img src="assets/images/airrow.png" alt="">Insurance Law</p>
+                </a>
+                <a>
+                    <p class="footer-link">
+                        <img src="assets/images/airrow.png" alt="">Crimial Law
+                    </p>
+                </a>
+                <a>
+                    <p class="footer-link">
+                        <img src="assets/images/airrow.png" alt="">Drug Offenses
+                    </p>
+                </a>
+                <a>
+                    <p class="footer-link">
+                        <img src="assets/images/airrow.png" alt="">Fire Accident
+                    </p>
+                </a>
+                <a>
+                    <p class="footer-link">
+                        <img src="assets/images/airrow.png" alt="">Employment Law
+                    </p>
+                </a>
+                <a>
+                    <p class="footer-link">
+                        <img src="assets/images/airrow.png" alt="">Property Law
+                    </p>
+                </a> -->
+            </div>
+            <div class="col-sm-6 col-lg-4 mt-1-9">
+                <div class="footer-sec footer-sec-pro">
+                    <p>OUR LEGAL</p>
+                    <h3>Need Legal Advice?</h3>
+                    <p>Our Lawyers will also represent you in civil litigation
+                        cases such as divorce.</p>
+                    <div class="contact-form">
+                        <form action="#" class="form-control">
+                            <div class="row">
+                                <div class="col col-md-12">
+                                    <div class="form-group m-0">
+                                        <input autofocus class="form-control"
+                                            type="text" name="firstname"
+                                            placeholder="Your Email Address"
+                                            required>
+                                    </div>
+                                </div>
+                                 <div class="col col-md-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control"
+                                            name="message" 
+                                            formControlName="" placeholder="Describe your case briefly"></textarea>
+
+                                        </div>
+                                    </div>
+                                    <div class="col col-md-12">
+
+                                        <button class="custom-btn mt-2 btn btn-white btn-animation-1"
+                                            type="submit">
+                                            <span>CONTACT US NOW</span>
+
+                                        </button>
+                                    </div>
+                               </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-3 mt-1-9">
+                <div class="footer-sec footer-sec-pro" style="padding-left:2%;margin-top:40px;">
+                    <h3>Business Hours</h3>
+                  <p>Opening Days:</p>
+                  <ul>
+                    <li>Monday - Friday: 9am to 20pm</li>
+                    <li>Saturday - 9am to 17pm</li>
+                  </ul>
+
+                  <p>Vacations:</p>
+                  <ul>
+                    <li>All Sundays Days All Official Holidays</li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container copyright-container">
+            <p style="font-size:12px;">
+                <span class="current-year"></span>
+                &nbsp;Copyright ©
+                {{currentYear}}.&nbsp;All Right Reserved | 
+                 Powered by
+                    <img src="assets/images/bg.png"> Burma Freelances
+            </p>
+        </div>
+    </div>
+
+</footer>

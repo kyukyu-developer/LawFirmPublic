@@ -1,0 +1,581 @@
+<div class="page-container">
+    <section class="page_banner text-center bg-img theme-overlay-blue-dark pt-5 pb-5" data-overlay-dark="7">
+        <div class="container decoration_wrap">
+            <h1 class="page_title">Product</h1>
+            <ul class="breadcrumb_nav unordered_list_center">
+                <li><a href="#">Home</a></li>
+                <li>/</li>
+                <li>Product Detaili</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="container mt-4">
+        <div class="row">
+            <div class="col-md-5" data-aos="fade-right">
+                <div class="img-bg">
+                    <img [src]="menuItems[currentId]?.productImage" class="img-fluid"
+                        *ngIf="menuItems[currentId]?.productImage" data-bs-toggle="modal" data-bs-target="#ModalOne">
+                </div>
+
+                <button class="contact-us mt-4" (click)="goToLink(menuItems[currentId]?.buyUrl)"><a
+                        class="text-decoration-none text-white">{{'product-detail.buynow' | translate}}</a></button>
+            </div>
+            <div class="col-md-7" data-aos="fade-left">
+                <div class="row mobile-img">
+                    <img [src]="menuItems[currentId]?.logoImage" class="img-sec"
+                        *ngIf="menuItems[currentId]?.logoImage">
+                     <h6 class="para"*ngIf="id===1" >
+                        {{ 'product.description' | translate }}
+                        </h6>
+                    <p class="para"*ngIf="id===1" >
+                        {{ 'product.description2' | translate }}
+                    </p>
+                    <p class="para"*ngIf="id===1" >
+                        {{ 'product.description3' | translate }}
+                    </p> 
+                    <h6 class="para1"*ngIf="id!==1" >
+                        {{ 'product.description4' | translate }}
+                    </h6>
+                    <p class="para1"*ngIf="id!==1" >
+                        {{ 'product.description5' | translate }}
+                    </p>
+                    <p class="para1"*ngIf="id!==1" >
+                        {{ 'product.description6' | translate }}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-section">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="nav" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active custom-tab" id="pills-home-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                aria-selected="true">Description</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                                aria-selected="false">Nutrient
+                                contained</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab" tabindex="0">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <div *ngIf="id===1" >
+                                   <h5 class="card-title">Package size 400g 800g</h5>
+                                   <p class="card-text">
+                                   {{'product-detail.paragraph' | translate}}
+                                   </p>
+                                </div>
+                                <div *ngIf="id!==1" id="collapse1" >
+                                    <h5 class="card-title">Package size 400g </h5>
+                                        <p class="card-text "*ngIf="id!==1" >
+                                            {{ 'product.description4' | translate }}
+                                        <p>                            
+                                 </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab" tabindex="0">
+                            <div class="card ">
+                                <div class="card-body">
+                                    <div *ngIf="id===1" >
+                                     <h5 class="card-title">Gaullac -3 Nutritional Information </h5>
+                                    <table class="table table-striped table-sm" cellspacing="0"
+                                    width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Items</th>
+                                                <th scope="col">ပါဝင်သောအာဟာရဓါတ်များ</th>
+                                                <th scope="col">၁၀၀ ဂရမ်တွင်ပါဝင်နူန်း</th>
+                                                <th scope="col">၁၀၀ မီလီလီတာတွင်ပါဝင်နူန်း</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Energy ၊ စွမ်းအင်</th>
+                                                <td>Kilojoule ၊ ကီလိုဂျိုး</td>
+                                                <td>1955  ၊ ၁၉၅၅</td>
+                                                <td>289  ၊ ၂၈၉</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Protein ၊ ပရိုတင်း</th>
+                                                <td>Gram  ၊ ဂရမ်</td>
+                                                <td>16.0  ၊ ၁၆.၀</td>
+                                                <td>237  ၊ ၂၃၇</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Whey Protein ၊ ဝှေးပရိုတင်း</th>
+                                                <td>Gram  ၊ ဂရမ်</td>
+                                                <td>6.4  ၊ ၆.၄</td>
+                                                <td>0.95  ၊ ၀.၉၅</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Casein ၊ ကေဇင်း</th>
+                                                <td>Gram  ၊ ဂရမ်</td>
+                                                <td>9.6  ၊ ၉.၆</td>
+                                                <td>1.42 ၊ ၁.၄၂</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Fat ၊ အဆီဓာတ်</th>
+                                                <td>Gram  ၊ ဂရမ်</td>
+                                                <td>20  ၊ ၂၀</td>
+                                                <td>2.96  ၊ ၂.၉၆</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Linoleic Acid ၊ လီနိုလစ်အက်ဆစ်</th>
+                                                <td>Gram  ၊ ဂရမ်</td>
+                                                <td>2.1  ၊ ၂.၁</td>
+                                                <td>0.3  ၊ ၀.၃</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">O-Linoleic Acid ၊
+                                                    အယ်လ်ဖာလီနိုလင်းနစ်
+                                                    အက်ဆစ်</th>
+                                                <td>Milligram  ၊ မီလီဂရမ်</td>
+                                                <td>230  ၊ ၂၃၀</td>
+                                                <td>34  ၊ ၃၄</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Carbohydrate၊
+                                                    ကာဗိုဟိုက်ဒရိုတ်</th>
+                                                <td>Gram  ၊ ဂရမ်</td>
+                                                <td>53.8  ၊ ၅၃.၈</td>
+                                                <td>8.0  ၊ ၈.၀</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Lactose ၊ လက်တို့စ်</th>
+                                                <td>Gram  ၊ ဂရမ်</td>
+                                                <td>53.8  ၊ ၅၃.၈</td>
+                                                <td>8.0  ၊ ၈.၀</td>
+                                            </tr>
+
+                                            <tr>
+                                            <th colspan="4">Vtamins ၊ ဗီတာမင်ဓါတ်များ
+                                                </th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"> Vtamins A ၊ ဗီတာမင် အေ</th>
+                                                <td>Microgram RE ၊ မိုက်ခရိုဂရမ် အာအီး</td>
+                                                <td>520 ၊ ၅၂၀</td>
+                                                <td>77 ၊ ၇၇</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Vtamins D ၊ ဗီတာမင် ဒီ</th>
+                                                <td>Microgram ၊ မိုက်ခရိုဂရမ်</td>
+                                                <td>8.0 ၊ ၈.၀</td>
+                                                <td>1.18 ၊ ၁.၁၈</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Vtamins E၊ ဗီတာမင် အီး</th>
+                                                <td>Milligram α-TE ၊ မီလီဂရမ် အယ်
+                                                    လ်ဖာ
+                                                    တီအီး</td>
+                                                <td>6.0 ၊ ၆.၀</td>
+                                                <td>0.89 ၊ ၀.၈၉</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Vtamins K1၊ ဗီတာမင် ကေဝမ်း</th>
+                                                <td>Microgram ၊ မိုက်ခရိုဂရမ်</td>
+                                                <td>65 ၊ ၆၅</td>
+                                                <td>10 ၊ ၁၀</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Vtamins B1 ၊ ဗီတာမင် ဘီဝမ်း</th>
+                                                <td>Microgram ၊ မိုက်ခရိုဂရမ်</td>
+                                                <td>620 ၊ ၆၂၀</td>
+                                                <td>92 ၊ ၉၂</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Vtamins B2 ၊ ဗီတာမင် ဘီတူး </th>
+                                                <td>Microgram ၊ မိုက်ခရိုဂရမ်</td>
+                                                <td>1200 ၊ ၁၂၀၀</td>
+                                                <td>178 ၊ ၁၇၈</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Vtamins B6 ၊ ဗီတာမင် ဘီဆစ်</th>
+                                                <td>Microgram ၊ မိုက်ခရိုဂရမ်</td>
+                                                <td>410 ၊ ၄၁၀</td>
+                                                <td>61 ၊ ၆၁</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Vtamins B12 ၊ ဗီတာမင် ဘီတွဲလ်</th>
+                                                <td>Microgram ၊ မိုက်ခရိုဂရမ်</td>
+                                                <td>3.0 ၊ ၃.၀</td>
+                                                <td>0.4 ၊ ၀.၄</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Niacin ၊ နိုင်ယာစင်</th>
+                                                <td>Microgram ၊ မိုက်ခရိုဂရမ်</td>
+                                                <td>4100 ၊ ၄၁၀၀</td>
+                                                <td>607 ၊ ၆၀၇</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Folic Acid ၊ ဖောလစ်အက်ဆစ်</th>
+                                                <td>Microgram ၊ မိုက်ခရိုဂရမ်</td>
+                                                <td>72.0 ၊ ၇၂.၀</td>
+                                                <td>10.7 ၊ ၁၀.၇</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Pantothenic Acid ၊ ပန်တိုသန်းနစ်
+                                                    အက်ဆစ်</th>
+                                                <td>Microgram ၊ မိုက်ခရိုဂရမ်</td>
+                                                <td>2700 ၊ ၂၇၀၀</td>
+                                                <td>400 ၊ ၄၀၀</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Vtamins C ၊ ဗီတာမင် စီ</th>
+                                                <td>Milligram ၊ မီလီဂရမ်</td>
+                                                <td>48 ၊ ၄၈</td>
+                                                <td>7.1 ၊ ၇.၁</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Biotin ၊ ဘိုင်အိုတင်</th>
+                                                <td>Microgram ၊ မိုက်ခရိုဂရမ်</td>
+                                                <td>18.0 ၊ ၁၈.၀</td>
+                                                <td>2.7 ၊ ၂.၇</td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="4">Minerala၊ သတ္တုဓါတ်များ</th>
+                                            <tr>
+                                                <th  scope="row"> Sodium ၊ ဆိုဒီယမ်</th>
+                                                <td>Milligram ၊ မီလီဂရမ်</td>
+                                                <td>200 ၊ ၂၀၀</td>
+                                                <td>30 ၊ ၃၀</td>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">Potasium ၊ ပိုတက်စီယမ်</th>
+                                                <td>Milligram ၊ မီလီဂရမ်</td>
+                                                <td>730 ၊ ၇၃၀</td>
+                                                <td>108 ၊ ၁၀၈</td>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">copper ၊ ကော့ပါး</th>
+                                                <td>Microgram ၊ မိုက်ခရိုဂရမ်</td>
+                                                <td>345 ၊ ၃၄၅</td>
+                                                <td>51 ၊ ၅၁</td>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">Magnesium ၊ မဂ္ဂစီယမ်</th>
+                                                <td>Milligram ၊ မီလီဂရမ်</td>
+                                                <td>48 ၊ ၄၈</td>
+                                                <td>7.1 ၊ ၇.၁</td>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">Iron ၊ သံဓါတ်</th>
+                                                <td>Milligram ၊ မီလီဂရမ်</td>
+                                                <td>7.0 ၊ ၇.၀</td>
+                                                <td>1.04 ၊ ၁.၀၄</td>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">Zinc ၊ ဇင့်</th>
+                                                <td>Milligram ၊ မီလီဂရမ်</td>
+                                                <td>3.8 ၊ ၃.၈</td>
+                                                <td>0.56 ၊ ၀.၅၆</td>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">Calcium ၊ ကယ်လ်ဆီယမ်</th>
+                                                <td>Milligram ၊ မီလီဂရမ်</td>
+                                                <td>620 ၊ ၆၂၀</td>
+                                                <td>92 ၊ ၉၂</td>
+                                            </tr> 
+                                            <tr>
+                                                <th  scope="row">Phosphorus ၊ ဖော့စ်ဖိုးရပ်စ်</th>
+                                                <td>Milligram ၊ မီလီဂရမ်</td>
+                                                <td>390 ၊ ၃၉၀</td>
+                                                <td>58 ၊ ၅၈</td>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">Iodine ၊ အိုင်အိုဒင်း</th>
+                                                <td>Microgram ၊ မိုက်ခရိုဂရမ်</td>
+                                                <td>110.0 ၊ ၁၁၀.၀</td>
+                                                <td>16 ၊ ၁၆</td>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">Chloride ၊ ကလိုရိုဒ်</th>
+                                                <td>Milligram ၊ မီလီဂရမ်</td>
+                                                <td>330 ၊ ၃၃၀</td>
+                                                <td>49 ၊ ၄၉</td>
+                                            </tr>
+                                            <tr>
+                                                <th colspan="4">Components ၊ အခြားအာဟာရဓါတ်များ</th>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">Selenium ၊ ဆလီနီယမ်</th>
+                                                <td>Microgram ၊ မိုက်ခရိုဂရမ်</td>
+                                                <td>22.0 ၊ ၂၂.၀</td>
+                                                <td>3 ၊ ၃</td>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">Choline ၊ ခိုလင်း</th>
+                                                <td>Milligram ၊ မီလီဂရမ်</td>
+                                                <td>95 ၊ ၉၅</td>
+                                                <td>14 ၊ ၁၄</td>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">Manganese ၊ မန္ဂနီစမ့်</th>
+                                                <td>Microgram ၊ မိုက်ခရိုဂရမ်</td>
+                                                <td>78.0 ၊ ၇၈.၀</td>
+                                                <td>12 ၊ ၁၂</td>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">Inostiol ၊ အင်နိုစစ်တောလ်</th>
+                                                <td>Milligram ၊ မီလီဂရမ်</td>
+                                                <td>122 ၊ ၁၂၂</td>
+                                                <td>18 ၊ ၁၈</td>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">Taurine ၊ တော်ရင်း</th>
+                                                <td>Milligram ၊ မီလီဂရမ်</td>
+                                                <td>34.2 ၊ ၃၄.၂</td>
+                                                <td>5 ၊ ၅</td>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">L-Carnitine ၊ အယ်လ် အာနီတင်း</th>
+                                                <td>Milligram ၊ မီလီဂရမ်</td>
+                                                <td>16.0 ၊ ၁၆.၀</td>
+                                                <td>2.4 ၊ ၂.၄</td>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">DHA ၊ ဒီအိတ်ချ်အေ</th>
+                                                <td>Milligram ၊ မီလီဂရမ်</td>
+                                                <td>8.4 ၊ ၈.၄</td>
+                                                <td>1.2 ၊ ၁.၂</td>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">ARA ၊ အေအာအေ</th>
+                                                <td>Milligram ၊ မီလီဂရမ်</td>
+                                                <td>15 ၊ ၁၅</td>
+                                                <td>2.2 ၊ ၂.၂</td>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">Polyfructose ၊ ပိုလီဖရက်ခ်တို့စ်</th>
+                                                <td>Milligram ၊ မီလီဂရမ်</td>
+                                                <td>3100 ၊ ၃၁၀၀</td>
+                                                <td>459 ၊ ၄၅၉</td>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">GOS ၊ ဂျီအိုအက်စ်</th>
+                                                <td>Milligram ၊ မီလီဂရမ်</td>
+                                                <td>150 ၊ ၁၅၀</td>
+                                                <td>22 ၊ ၂၂</td>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">FOS ၊ အက်ဖ်အိုအက်စ်လ်</th>
+                                                <td>Milligram ၊ မီလီဂရမ်</td>
+                                                <td>100 ၊ ၁၀၀</td>
+                                                <td>15 ၊ ၁၅</td>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">Lutein ၊လူတင်း</th>
+                                                <td>Microgram ၊ မိုက်ခရိုဂရမ်</td>
+                                                <td>170 ၊ ၁၇၀</td>
+                                                <td>25 ၊ ၂၅</td>
+                                            </tr>
+                                            <tr>
+                                                <th  scope="row">Nucleotides ၊ နူကလီအိုတိုက်ဒ်စ်</th>
+                                                <td>Milligram ၊ မီလီဂရမ်</td>
+                                                <td>18 ၊၁၈</td>
+                                                <td>3 ၊ ၃</td>
+                                            </tr>
+                                        </tbody>
+                                    </table> 
+                                    </div>
+                                    <div *ngIf="id!==1" id="collapse1">
+                                    <h5 class="card-title">Gaullac MOM Nutritional Information</h5>
+                                    <table class="table" width="100%">
+                                                <thead>
+                                                  <tr>
+                                                    <th scope="col">Items ၊ ပါဝင်သော အာဟာရဓာတ်များ</th>
+                                                    <th scope="col">၁၀၀ဂရမ်တွင်ပါဝင်နှုန်း</th>
+                                                    <th scope="col">NRV%</th>
+                                                  </tr>
+                                                </thead>
+                                                <tbody>
+                                                  <tr>
+                                                    <th scope="row">Energy ၊ စွမ်းအင်</th>
+                                                    <td>kJ   ၁၆၃၀.၀၀</td>
+                                                    <td>0.2 ၊ ၀.၂</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">Protein ၊ ပရိုတင်း</th>
+                                                    <td>g    ၂၃.၀၀</td>
+                                                    <td>0.38 ၊ ၀.၃၈</td>
+                                                  </tr>
+                                                  <tr>
+                                                    <th scope="row">Fat ၊ အဆီဓာတ်</th>
+                                                    <td>g    ၈.၉၀</td>
+                                                    <td>0.15 ၊ ၀.၁၅</td>
+                                                  </tr>
+
+                                          <tr>
+                                            <th scope="row">Carbohydrate ၊ ကာဗွန်ဟိုက်ဒရိတ်</th>
+                                            <td>g    ၅၆.၀၀</td>
+                                            <td>0.19 ၊ ၀.၁၉</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Latctose  ၊ လက်တို့စ်</th>
+                                            <td>g    ၄၉.၀၀</td>
+                                            <td></td>
+                                             </tr>
+                                          <tr>
+                                            <th scope="row">Dietary fiber  ၊ အမျှင်ဓာတ်များ<br>
+                                                (Polydextrose,        (ပိုလီဓါတ်ထရော့စ် ၊ <br>
+                                                Polyfructose,            ပိုလီဖရက်ခ်တို့စ်၊ 
+                                                Fructo-                   ဖရက်ခ်တို- <br>
+                                                oligosaccharide)      အိုလီဂိုဆက်ခရိုက်ဒ် )</th>
+                                            <td class="table-sec">g     ၄.၇၀</td>
+                                            <td class="table-sec">0.19 ၊ ၀.၁၉</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Sodium ၊ ဆိုဒီယမ်</th>
+                                            <td>mg   ၃၀၀.၀၀</td>
+                                            <td>0.15 ၊ ၀.၁၅</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Vitamin A ၊ ဗီတာမင် အေ</th>
+                                            <td>μg RE  ၂၄၀.၀၀</td>
+                                            <td>0.3 ၊ ၀.၃</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Vitamin D ၊ ဗီတာမင် ဒီ</th>
+                                            <td>μg  ၃.၃၀</td>
+                                            <td>0.66 ၊ ၀.၆၆</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Vitamin E ၊ ဗီတာမင် အီး</th>
+                                            <td>mg α-TE   ၈.၀၀</td>
+                                            <td>0.57 ၊ ၀.၅၇</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Vitamin K ၊ ဗီတာမင် ကေ</th>
+                                            <td>μg  ၄၆.၀၀</td>
+                                            <td>0.58 ၊ ၀.၅၈</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Vitamin B1 ၊ ဗီတာမင် ဘီဝမ်း</th>
+                                            <td>mg ၁.၅၀</td>
+                                            <td>1.07 ၊ ၁.၀၇</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Vitamin B2 ၊ ဗီတာမင် ဘီတူး</th>
+                                            <td>mg  ၁.၀၀</td>
+                                            <td>0.71 ၊ ၀.၇၁</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Vitamin B6 ၊ ဗီတာမင် ဘီဆစ်</th>
+                                            <td>μg    ၁.၂၀</td>
+                                            <td>0.86 ၊ ၀.၈၆</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Vitamin B12 ၊ ဗီတာမင် ဘီတွဲလ်</th>
+                                            <td>μg   ၃.၇၀</td>
+                                            <td>1.54 ၊ ၁.၅၄</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Vitamin C ၊ ဗီတာမင် စီ</th>
+                                            <td>mg ၁၂၀</td>
+                                            <td>1 ၊ ၁</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Niacin ၊ နိုင်ယာစင်</th>
+                                            <td>mg  8.50</td>
+                                            <td>0.61 ၊ ၀.၆၁</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Folic acid ၊ ဖောလစ်အက်ဆစ်</th>
+                                            <td>μg  ၇၅၀.၀၀</td>
+                                            <td>1.1 ၊ ၁.၁</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Pantothenic acid ၊  ပန်တိုသန်းနစ် အက်ဆစ်</th>
+                                            <td>mg  ၅.၀၀</td>
+                                            <td>1 ၊ ၁</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Choline ၊ ခိုလင်း</th>
+                                            <td>mg ၉၁.၀၀</td>
+                                            <td>0.2 ၊ ၀.၂</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Phosphorus  ၊ ဖော့စ်ဖိုးရပ်စ်</th>
+                                            <td>mg ၅၀၄.၀၀</td>
+                                            <td>0.72 ၊ ၀.၇၂</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Magnesium ၊ မဂ္ဂနီစီယမ်</th>
+                                            <td>mg ၆၃.၀၀</td>
+                                            <td>0.21 ၊ ၀.၂၁</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Calcium ၊ ကယ်လ်စီယမ်</th>
+                                            <td>mg ၆၀၅.၀၀</td>
+                                            <td>0.76 ၊ ၀.၇၆</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Iron ၊ သံဓာတ်</th>
+                                            <td>mg  ၁၅.၀၀</td>
+                                            <td>1 ၊ ၁</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Zinc ၊ ဇင့်</th>
+                                            <td>mg  ၁၀.၀၀</td>
+                                            <td>0.67 ၊ ၀.၆၇</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Iodine ၊ အိုင်အိုဒင်း</th>
+                                            <td>μg  ၄၀.၀၀</td>
+                                            <td>0.27 ၊  ၀.၂၇</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Copper ၊ ကော့ပါး</th>
+                                            <td>mg  ၁.၂၀</td>
+                                            <td>0.8 ၊ ၀.၈</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Taurine  ၊ တော်ရင်း</th>
+                                            <td>mg  ၄၅.၀၀</td>
+                                            <td></td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">DHA ၊  ဒီအိတ်ချ်အေ</th>
+                                            <td>mg   ၄၀.၀၀</td>
+                                            <td></td>
+                                          </tr>
+
+
+                                        </tbody>
+                                      </table>
+                            </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- <div class="d-flex mb-3">
+                <div class="p-2 col-md-6"></div>
+                <div class="p-2">
+                    <a href="#" class="btn btn-primary"><i class="fa fa-chevron-left"
+                            aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Prev</a>
+                </div>
+                <div class="p-2">
+                    <a href="#" class="btn btn-primary">Next&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-right"
+                            aria-hidden="true"></i></a>
+                </div>
+            </div> -->
+        </div>
+    </section>
+</div>
+<br><br>

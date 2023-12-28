@@ -1,0 +1,22 @@
+<div class="row" [routerLink]="['/news-detail/',  newlists.PostID]" [ngClass]="{'pattern-3' : related}">
+    <div class="col-md-5">
+        <div class="hover-img">
+            <img src="assets/images/no-image.png" *ngIf="!coverphoto " class="img-fluid">
+            <img [src]="linkUrl +  coverphoto  | safe:'url'" *ngIf="coverphoto" class="img-fluid">
+        </div>
+    </div>
+
+    <div class="col-md-7">
+        <div class="recent-text">
+            <h2 class="para">{{newlists.PostTitle | slice:0:80}} <span *ngIf="newlists.PostTitle.length > 80"> ...</span></h2>
+            <!-- <span class="new-text"> {{shareService.DateChange(newlists.PostOn)}}
+                <span *ngIf="shareService.DateChange(newlists.PostExpire) != ''">-</span> {{shareService.DateChange(newlists.PostExpire)}}
+            </span> -->
+            <!-- <p class="desc"> {{newlists.Body | slice:0:80}}
+                <span *ngIf="newlists.Body.length > 80">...</span>
+            </p> -->
+        </div>
+
+    </div>
+</div>
+<hr>

@@ -1,0 +1,55 @@
+app-nav-bar {
+  position: relative;
+  z-index: 999;
+}
+
+.scroll-to-top {
+}
+
+.scroll-to-top {
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  position: fixed;
+  bottom: 110px;
+  right: 20px;
+  display: none;
+  border-radius: 50%;
+  background-color: #bd9d4f  !important;
+  //border: 1px solid #e1f9ff;
+  width: 50px;
+  height: 50px;
+  line-height: 30px;
+  z-index: 90;
+  outline: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  cursor: pointer;
+  background-color: #6c5c35  !important;
+  color: #fff;
+}
+
+.image-scroll {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  padding-top: 10px;
+}
+
+app-loading {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+}

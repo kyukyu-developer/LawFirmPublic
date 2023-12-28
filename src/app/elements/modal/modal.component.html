@@ -1,0 +1,51 @@
+<!-- <div class="modal">
+  <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-content">
+ 
+      <div class="modal-body">
+        <button type="button" class="btn btn-close close " ()="closeModal()" style="margin: 3px;"
+        aria-label="Close"></button>
+        <owl-carousel-o [options]="customOptions" id="new_slide">
+          <ng-template carouselSlide *ngFor="let new_images of
+                promoimgList ;let i=index">
+            <div class="work-post-gal" (click)="openModal()">
+              <div class="">
+                <img [src]="linkUrl + new_images" class="w-0 d-block" (click)="openModal()">
+                <div class="hover-box">
+
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+<div class="modal" class="modal">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="image-body modal-content">
+      <div>
+
+        <div>
+          <owl-carousel-o [options]="customOptions" id="new_slide">
+            <ng-template carouselSlide *ngFor="let new_images of
+                  promoimgList ;let i=index">
+              <div class="work-post-gal" (click)="openModal()">
+                <div class="">
+                  <img [src]="linkUrl + new_images" class="w-0 d-block" (click)="openModal()">
+                  <div class="hover-box">
+
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </owl-carousel-o>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

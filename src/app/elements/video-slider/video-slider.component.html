@@ -1,0 +1,24 @@
+<section class="h-round">
+    <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide *ngFor="let video of videoData;let i = index">
+            <!-- <div class='embed-container'>
+                <iframe [src]="video.imageUrl" title="YouTube video player" frameborder="0"
+                    class="youtube-video" frameborder="0" allow="autoplay; fullscreen" allowfullscreen
+                    onload="loadIframe()"></iframe>
+            </div> -->
+            <div class="video-container">
+                <div class="overlay_">
+                    <img src="assets/icon/video-play.png" (click)="playVideo(video.linkUrl)">
+                </div>
+                <img [src]="video.imageUrl" class="cover" />
+            </div>
+        </ng-template>
+
+
+    </owl-carousel-o>
+</section>
+<div class="video-full" *ngIf="fullVideo">
+    <button type="button" (click)="closeVideo()" class="close_"><img src="assets/icon/close.png"></button>
+    <iframe [src]="selectedVideo | safe:'resourceUrl'" title="YouTube video player" frameborder="0"
+        class="youtube-video" frameborder="0" id="youtubeVideo" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div>

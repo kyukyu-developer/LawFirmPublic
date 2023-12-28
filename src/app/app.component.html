@@ -1,0 +1,16 @@
+<app-nav-bar>
+</app-nav-bar>
+<router-outlet (activate)="onActivate($event)"></router-outlet>
+<app-footer></app-footer>
+
+<app-modal-announcememt *ngIf="shared_.announcementModal"></app-modal-announcememt>
+
+<script id="64e87706cd6c5433487aa722" src="https://dashboard.chatfuel.com/integration/entry-point.js" async defer></script>
+<a class="scroll-to-top" style="display: inline;" *ngIf="isShow" (click)="gotoTop()">
+    <img src="assets/images/up-arrow.png" class="image-scroll">
+</a>
+
+
+<app-loading *ngIf="shared_.loading"></app-loading>
+<!-- <app-chat></app-chat> -->
+

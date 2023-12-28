@@ -1,0 +1,122 @@
+.Latest-section {
+  min-height: 93vh;
+  margin-top: 20px;
+}
+
+.link-title {
+  font-weight: 700;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.title {
+  padding: 10px;
+  padding-left: 0px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.new-img {
+  img {
+    min-height: 275px;
+    object-fit: cover;
+  }
+}
+
+.new-date {
+  margin-bottom: 0;
+  color: gray;
+  font-weight: normal;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+.card-label-section1 {
+  text-decoration: none;
+  //   color: #373737;
+  font-weight: bold;
+}
+
+.inner-new {
+  cursor: pointer;
+  border: 1px solid #e4e4e4;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+  margin-bottom: 24px;
+  border-radius: 5px;
+  .inner-text {
+    padding: 15px 20px 25px 20px;
+    color: var(--primary-color);
+    // height: 80px;
+    // margin-bottom: 10px;
+  }
+}
+
+.images:hover img {
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+}
+
+.images img {
+  transition: transform 0.5s ease;
+}
+
+.new-img {
+  height: 250px;
+  /* [1.1] Set it as per your need */
+  overflow: hidden;
+  /* [1.2] Hide the overflowing of child elements */
+}
+
+.theme-overlay-blue-dark[data-overlay-dark]:before {
+  background: rgba(39, 38, 30, 0.7);
+}
+
+[data-overlay-dark="7"]:before,
+[data-overlay-light="7"]:before {
+  opacity: 0.5;
+}
+
+[data-overlay-dark]:before,
+[data-overlay-light]:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+[data-overlay-dark],
+[data-overlay-light] {
+  position: relative;
+}
+
+.decoration_wrap {
+  z-index: 1;
+  position: relative;
+}
+
+.about {
+  margin: 50px 0;
+}
+
+.img-bg {
+  background-image: url "(/assets/images/bg-image.jpg)";
+}
+
+.img-sec {
+  width: 380px;
+  position: relative;
+  left: -9px;
+  margin-bottom: 20px;
+}
+
+
+
+.no-data{
+  padding-top:0px !important;
+  height : 68vh;
+}

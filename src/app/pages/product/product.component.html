@@ -1,0 +1,36 @@
+<div class="page-container">
+    <section class="page_banner text-center bg-img theme-overlay-blue-dark pt-5 pb-5" data-overlay-dark="7">
+        <div class="container decoration_wrap">
+            <h1 class="page_title">{{ 'footer.product-page' | translate }}</h1>
+            <ul class="breadcrumb_nav unordered_list_center">
+                <li><a href="#">{{ 'footer.home' | translate }}</a></li>
+                <li>/</li>
+                <li>{{ 'footer.product-page' | translate }}</li>
+            </ul>
+        </div>
+    </section>
+    <section class="container mt-4">
+        <div *ngFor="let menuItem of menuItems;let i = index">
+            <div class="row flex-reverse">
+                <div class="col-md-7" data-aos="fade-right" data-aos-duration="5000">
+                    <div class="wrap">
+                        <img [src]="menuItem.logoImage" class="img-fluid" *ngIf="menuItem.logoImage">
+                        <br><br>
+                        <!-- <h6 class="para">{{menuItem.description}}</h6> -->
+                        <h6 class="para" *ngIf="i !== 1">{{ 'product.description' | translate }}</h6>
+                        <h6 class="para" *ngIf="i== 1">{{ 'product.description4' | translate }}</h6>
+                    </div>
+                    <button class="contact-us mt-4" [routerLink]="['/product-detail',menuItem.id ]">
+                        <a class="text-decoration-none text-white">{{
+                            'product.detail-info' | translate }}</a></button>
+                </div>
+                <div class="col-md-5 mt-md-0 mt-3" data-aos="fade-left" data-aos-duration="5000">
+                    <img [src]="menuItem.productImage" class="mobile-img" *ngIf="menuItem.productImage"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                </div>
+                <hr class="line-sec" *ngIf="i !== 1">
+            </div>
+        </div>
+    </section>
+</div>
+<br><br>

@@ -1,0 +1,182 @@
+<div class="page-container">
+    <div class="">
+    <section class="page_banner text-center bg-img theme-overlay-blue-dark pt-5 pb-5" data-overlay-dark="7">
+        <div class="decoration_wrap">
+            <h1 class="page_title">CONTACT US</h1>
+            <ul class="breadcrumb_nav unordered_list_center">
+                <li><a href="#">Home</a></li>
+                <li><img src="assets/images/airrow.png" alt=""></li>
+                <li>CONTACT US</li>
+            </ul>
+        </div>
+    </section>
+</div>
+<br><br><br><br>
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <h3 class="text-white text-center">Contact Us</h3>
+            </div>
+            <div class="col-md-3">
+                <div class="contact-info">
+                    <img src="assets/images/address.png" alt="">
+                    <h3>Address</h3>
+                    <p>NorthDagon Tsp, 1341 Bohmu Ba Htoo Rd, Yangon 11421.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="contact-info">
+                    <img src="assets/images/address.png" alt="">
+                    <h3>Email Us</h3>
+                    <p>info@amityexample.com</p>
+                    <br>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="contact-info">
+                    <img src="assets/images/address.png" alt="">
+                    <h3>Call Now</h3>
+                    <p>+95 444 555 666</p>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br><br><br>
+
+    <section class="contact-us">
+        <div class="container">
+            <h2 class="title">Have any Questions?</h2>
+            <div class="contact">
+                <h2 class="contact-title">Do you have any questions or concerns related to your legal matters? Contact us today to schedule a consultation.</h2>
+                <br>
+            <div class="row d-flex align-items-center">
+                <!-- <div class="col-md-4">
+                    <img src="assets/images/contact.png" alt="">
+                </div> -->
+
+                <div class="col-md-6">
+                    <div class="contact-one">
+                      
+                        <div class="contact-form">
+                            <form action="#" [formGroup]="form">
+                                <div class="row">
+                                    <div class="col col-md-6">
+                                        <div class="form-group m-0">
+                                            <input autofocus class="form-control" type="text" name="firstname"
+                                                placeholder="Your Name" formControlName="name"
+                                                [ngClass]="{
+                                                    'is-invalid' : submitted &&
+                                                    f['name'].errors }" required>
+                                          
+
+                                        </div>
+                                    </div>
+                                    <div class="col col-md-6">
+                                        <div class="form-group m-0">
+                                            <input class="form-control" type="email" name="email"
+                                                placeholder="Email"
+                                                formControlName="reply_email" [ngClass]="{
+                                                    'is-invalid' : submitted &&
+                                                    f['reply_email'].errors }">
+                                            <div *ngIf="submitted &&
+                                                    f['reply_email'].errors" class="invalid-feedback">
+                                              
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-md-6">
+                                        <div class="form-group m-0">
+                                            <input autofocus class="form-control" type="text" name="firstname"
+                                                placeholder="Phone Number" formControlName="name"
+                                                [ngClass]="{
+                                                    'is-invalid' : submitted &&
+                                                    f['name'].errors }" required>
+                                            <div *ngIf="submitted &&
+                                                    f['name'].errors" class="invalid-feedback">
+                                                <div *ngIf="f['name'].errors['required']">{{ 'contact.contact-name' |
+                                                    translate }}</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col col-md-6">
+                                        <div class="form-group m-0">
+                                            <input class="form-control" type="email" name="email"
+                                                placeholder="Address"
+                                                formControlName="reply_email" [ngClass]="{
+                                                    'is-invalid' : submitted &&
+                                                    f['reply_email'].errors }">
+                                            <div *ngIf="submitted &&
+                                                    f['reply_email'].errors" class="invalid-feedback">
+                                                <div *ngIf="f['reply_email'].errors['required']">{{
+                                                    'contact.contact-email' | translate }}</div>
+                                                <div *ngIf="f['reply_email'].errors['email']">{{ 'contact.invalid-email'
+                                                    | translate }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="col col-md-6">
+                                        <div class="form-group m-0">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Other Packages</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                              </select>
+
+                                        </div>
+                                    </div>
+                                    <div class="col col-md-6">
+                                        <div class="form-group m-0">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>Services</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                              </select>
+                                        </div>
+                                    </div> -->
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <textarea class="form-control" name="message"
+                                                placeholder="Message"
+                                                formControlName="message" [ngClass]="{
+                                                    'is-invalid' : submitted &&
+                                                    f['message'].errors }"></textarea>
+                                            <div *ngIf="submitted &&
+                                            f['message'].errors" class="invalid-feedback">
+                                                <div *ngIf="f['message'].errors['required']">{{
+                                                    'contact.contact-message' | translate }}</div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col text-center">
+
+                                        <button class="message-btn mt-2" type="submit">
+                                            <span *ngIf="!loading">GET IN TOUCH</span>
+                                            <span *ngIf="loading" class="spinner-border spinner-border-sm"></span>
+
+
+                                        </button>
+                                        <!-- <button type="submit" class="custom-btn mt-2 btn btn-white btn-animation-1"><span>Get In Touch</span></button> -->
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3817.6677168728966!2d96.17776997539794!3d16.89232411687763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c193c73b4ccd8b%3A0xee11b7299c7e8d25!2s1341%20Bohmu%20Ba%20Htoo%20Rd%2C%20Yangon!5e0!3m2!1sen!2smm!4v1703095306450!5m2!1sen!2smm" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</div>
+<br><br><br><br>
