@@ -21,6 +21,7 @@ import { PackageComponent } from './package/package.component';
 import { Router, RouterModule } from '@angular/router';
 import { FaqSectionComponent } from './elements/faq-section/faq-section.component';
 
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/data/languages/', '.json');
 }
@@ -35,6 +36,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     PackageComponent,
     FaqSectionComponent,
     PackageComponent
+
   ],
   imports: [
     RouterModule,

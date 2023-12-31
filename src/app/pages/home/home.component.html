@@ -1,194 +1,224 @@
 <div class="home-slider">
-    <div class="h-100">
-        <owl-carousel-o [options]="homebanner" id="home_slide">
-            <ng-template carouselSlide>
-                <div class="cover-background" style="background-image: url(../../../assets/images/banner.jpg)">
-                  <div class="container">
-                    <div class="banner-text" data-aos="fade-right" data-aos-duration="1000">
-                    </div>
-                  </div>
-                </div>
-               
-              </ng-template>
-            <ng-template carouselSlide>
-              <div class="cover-background" style="background-image: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
-                <div class="container">
-                  <div class="banner-text" data-aos="fade-right" data-aos-duration="1000">
-                  </div>
-                </div>
-              </div>
-            </ng-template>
-        </owl-carousel-o>
-    </div>
+  <div class="h-100">
+    <owl-carousel-o [options]="homebanner" id="home_slide">
+      <ng-template carouselSlide>
+        <div class="cover-background" style="background-image: url(../../../assets/images/banner-real-estate.jpg)">
+          <div class="container">
+            <div class="banner-text" data-aos="fade-right" data-aos-duration="1000">
+            </div>
+          </div>
+        </div>
+
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="cover-background"
+          style="background-image: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+          <div class="container">
+            <div class="banner-text" data-aos="fade-right" data-aos-duration="1000">
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </owl-carousel-o>
+  </div>
 
 </div>
-<a (click)="scroll(target2)" class="scroll-indicator d-flex text-center pt-1 page-scroll" id="scroll" style="z-index: 10000; bottom: 3%;cursor:pointer;opacity: 0.5512;position:absolute;justify-content:center;left:50%;">
-    <div class="bounce-arrow anchor bounce"></div>
+<a (click)="scroll(target2)" class="scroll-indicator d-flex text-center pt-1 page-scroll" id="scroll"
+  style="z-index: 10000; bottom: 3%;cursor:pointer;opacity: 0.5512;position:absolute;justify-content:center;left:50%;">
+  <div class="bounce-arrow anchor bounce"></div>
 </a>
 <!-- <img src="assets/images/cloud-end.png" class="cloud ">
 <img src="assets/images/cloud.png" class="cute-cloud">
 <br><br> -->
 
-<div class="container" style="margin-top:70px;"> 
-    <div class="row">
-        <!-- <div class="col-md-6" data-aos="zoom-out" data-aos-duration="30000"> -->
-            <div class="col-md-6">
-            <div class="law-video"  #target2 >
-                 <img width="596"
-                    height="400"
-                    src="assets/images/aboutus.jpg"
-                    class="attachment-full" alt> 
-            </div>
-            <div class="d-flex little-txt">
-                <!-- <div class="custom-txt">
+
+
+<div class="container" style="margin-top:70px;">
+  <div class="row" id="aboutus-section">
+    <!-- <div class="col-md-6" data-aos="zoom-out" data-aos-duration="30000"> -->
+    <div class="col-md-6 slide-section" id="aboutus-section-slide-left">
+      <div class="law-video" #target2>
+        <img width="596" height="400" src="assets/images/aboutus.jpg" class="attachment-full" alt>
+      </div>
+      <div class="d-flex little-txt">
+        <!-- <div class="custom-txt">
                     <p></p>
-                </div> 
+                </div>
                 <div >
                     <img src="assets/images/vertical-line.png" alt="">
                 </div>-->
-                <div class="custom-txt">
-                    <h5>The Royal Law Firm</h5>
-                    <p>09 963 754111</p>
-                </div>
-                <div >
-                    <img src="assets/images/vertical-line.png" alt="">
-                </div> 
-                <div class="custom-txt">
-                    <h5>Tharaphu Gas</h5>
-                    <p>09 430 57708</p>
-                </div>
-                <div >
-                    <img src="assets/images/vertical-line.png" alt="">
-                </div> 
-                <div class="custom-txt">
-                    <h5>Royal Estate</h5>
-                    <p>09 430 57708</p>
-                </div>
-            </div>
-           
+        <div class="custom-txt">
+          <h5>The Royal Law Firm</h5>
+          <p>09 963 754111</p>
         </div>
-        <!-- data-aos="zoom-out" data-aos-duration="50000" -->
-        <div class="col-md-6">
-            <div class="home-about">
-               
-                <h3>ABOUT US</h3>
-                <p class="middle-title">Empowering Success: Your Comprehensive Partner in Law</p>
-                <p>Welcome to Burma Consultancy Group, where integrity meets expertise in the pursuit of justice. Established in [Year], we have been dedicated to providing exceptional legal services tailored to meet the unique needs of our clients. BCG stands for Brilliance, Commitment, and Guidance – principles that define our approach to the practice of law.</p>    
-             
-                <br/>
+        <div>
+          <img src="assets/images/vertical-line.png" alt="">
+        </div>
+        <div class="custom-txt">
+          <h5>Tharaphu Gas</h5>
+          <p>09 430 57708</p>
+        </div>
+        <div>
+          <img src="assets/images/vertical-line.png" alt="">
+        </div>
+        <div class="custom-txt">
+          <h5>Royal Estate</h5>
+          <p>09 430 57708</p>
+        </div>
+      </div>
 
-                 <div class="text-center">
-                <nav class="tabs">
-                    <div class="selector"></div>
-                    <a (click)="tabClick('mission')" [ngClass]="{'active' : mission}" style="border-radius: 30px 0 0 0;" >Our Mission</a>
-                    <a style="border-radius: 0 0 30px 0;" (click)="tabClick('vision')" [ngClass]="{'active' : vision}">Our Vision</a>
-                    
-                    <!-- <a (click)="tabClick('value')" style="border-radius: 0 0 30px 0;" [ngClass]="{'active' : value}">Our Value</a> -->
-                  </nav>
-                  <p *ngIf="mission" class="text-white" style="margin-top:15px;text-align:justify;">
-                    At Burma Consultancy Group, our mission is to deliver exceptional legal counsel and representation with unwavering dedication to our clients' success. We commit ourselves to upholding the highest standards of integrity, professionalism, and client advocacy. Through a client-centric approach, we aim to provide innovative and tailored legal solutions that empower individuals and businesses to navigate the complexities of the legal system confidently.
-                  </p>  
-                  <p *ngIf="vision" class="text-white" style="margin-top:15px;text-align:justify;">
-                    Burma Consultancy Group envisions a future where the pursuit of justice is not only a legal obligation but a transformative force that shapes a fair and inclusive society. Our vision extends beyond legal practice; we aspire to be catalysts for positive change, influencing legal norms, and fostering a culture where everyone has access to transparent, ethical, and innovative legal solutions. By embracing collaboration, diversity, and continuous improvement, we aim to redefine the boundaries of legal excellence and contribute to a world where the rule of law is synonymous with justice, equality, and empowerment.
-                  </p> 
-                 
-                  <!-- <p *ngIf="value" class="text-white" style="margin-top:15px;">
+    </div>
+    <!-- data-aos="zoom-out" data-aos-duration="50000" -->
+    <div class="col-md-6 slide-section" id="aboutus-section-slide-right">
+      <div class="home-about">
+        <h3 class="fade-in-paragraph">ABOUT US</h3>
+        <p class="middle-title">Empowering Success: Your Comprehensive Partner in Law</p>
+        <p>Welcome to Burma Consultancy Group, where integrity meets expertise in the pursuit of justice. Established in
+          [Year], we have been dedicated to providing exceptional legal services tailored to meet the unique needs of
+          our clients. BCG stands for Brilliance, Commitment, and Guidance – principles that define our approach to the
+          practice of law.</p>
+
+        <br />
+
+        <div class="text-center">
+          <nav class="tabs">
+            <div class="selector"></div>
+            <a (click)="tabClick('mission')" [ngClass]="{'active' : mission}" style="border-radius: 30px 0 0 0;">Our
+              Mission</a>
+            <a style="border-radius: 0 0 30px 0;" (click)="tabClick('vision')" [ngClass]="{'active' : vision}">Our
+              Vision</a>
+
+            <!-- <a (click)="tabClick('value')" style="border-radius: 0 0 30px 0;" [ngClass]="{'active' : value}">Our Value</a> -->
+          </nav>
+          <p *ngIf="mission" class="text-white" style="margin-top:15px;text-align:justify;">
+            At Burma Consultancy Group, our mission is to deliver exceptional legal counsel and representation with
+            unwavering dedication to our clients' success. We commit ourselves to upholding the highest standards of
+            integrity, professionalism, and client advocacy. Through a client-centric approach, we aim to provide
+            innovative and tailored legal solutions that empower individuals and businesses to navigate the complexities
+            of the legal system confidently.
+          </p>
+          <p *ngIf="vision" class="text-white" style="margin-top:15px;text-align:justify;">
+            Burma Consultancy Group envisions a future where the pursuit of justice is not only a legal obligation but a
+            transformative force that shapes a fair and inclusive society. Our vision extends beyond legal practice; we
+            aspire to be catalysts for positive change, influencing legal norms, and fostering a culture where everyone
+            has access to transparent, ethical, and innovative legal solutions. By embracing collaboration, diversity,
+            and continuous improvement, we aim to redefine the boundaries of legal excellence and contribute to a world
+            where the rule of law is synonymous with justice, equality, and empowerment.
+          </p>
+
+          <!-- <p *ngIf="value" class="text-white" style="margin-top:15px;">
                     Value. All the Lorem Ipsum generators on the Internet tend to predefined chunks as necessary, making this the first true generator on net. Uses a dictionary of over always true latin words.
                   </p>      -->
-            </div>
-            <div>
-                <a class="btn custom-link" (click)="goRoute('about-us')">
-                    Read More
-                </a>
-            </div>
-              
+        </div>
+        <div>
+          <a class="btn custom-link" (click)="goRoute('about-us')">
+            Read More
+          </a>
+        </div>
 
-                <div class="elementor-widget-container">
-                    <div class="section-title-wrapper call-us-team">
-                        <div class="title-wrap">
-                            <div class="sub-title">
-                                <span class="subtitle-dots">At our Burma Consultancy Group,</span>
-                            </div>
-                            <h4 class="section-title">Your satisfaction is our priority.</h4>
-                        </div><!-- .title-wrap -->
-                        <div class="section-description">
-                            <p class="section-content">
-                                <a href="tel:+5284567592" class="cea-button-link">
-                                    <!-- <span class="cea-button-text">
+
+        <div class="elementor-widget-container">
+          <div class="section-title-wrapper call-us-team">
+            <div class="title-wrap">
+              <div class="sub-title">
+                <span class="subtitle-dots">At our Burma Consultancy Group,</span>
+              </div>
+              <h4 class="section-title">Your satisfaction is our priority.</h4>
+            </div><!-- .title-wrap -->
+            <div class="section-description">
+              <p class="section-content">
+                <a href="tel:+5284567592" class="cea-button-link">
+                  <!-- <span class="cea-button-text">
                                         <i class="bi bi-telephone-fill me-1"></i> CALL US</span> -->
-                                        <span class="cea-button-num">NorthDagon Tsp, 1341 Bohmu Ba Htoo Rd, Yangon 11421.</span>
-        
-                                    </a>
-                                </p>
-                            </div>
-                            </div></div>
-                   
-            </div>
+                  <span class="cea-button-num">NorthDagon Tsp, 1341 Bohmu Ba Htoo Rd, Yangon 11421.</span>
 
+                </a>
+              </p>
             </div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
-    
+  </div>
+
 </div>
-<br><br><br><br><br>
+<br><br><br>
 <div class="container">
- 
-    <h2 class="small-title text-center text-white">OUR FOUNDER</h2>
-    <!-- <h2 class="text-center text-white">Family Law</h2> -->
-    <br><br>
-    <div class="row justify-content-left about-law d-flex align-items-top">
-        <div class="col-md-4">
-            <img src="assets/images/law2.png" alt="" class="img-fluid aboutlawyer">
-        </div>
-        <div class="col-md-4">
-            <h3>NAME LAWYERS</h3>
-            <p>All the Lorem Ipsum generators on the Internet tend to predefined chunks as necessary, making this the first true generator on net.</p>
-            <a class="btn custom-link">
-                Read More
-                <!-- <div class="elementor-divider"><span class="elementor-divider-separator"></span></div> -->
-            </a>
-        </div>
+
+  <h2 class="small-title text-center text-white">OUR FOUNDER</h2>
+  <!-- <h2 class="text-center text-white">Family Law</h2> -->
+
+  <div class="row justify-content-left about-law d-flex align-items-top " id="founder-section">
+    <div class="col-md-4 slide-section" id="founder-section-slide-left">
+      <!-- <img src="assets/images/law2.png" alt="" class="img-fluid aboutlawyer"> -->
+      <div style="position: relative;">
+        <div class="box one"></div>
+        <div class="box two"></div>
+        <div class="box three founder"></div>
+      </div>
 
     </div>
+    <div class="col-md-4 slide-section" id="founder-section-slide-right">
+      <h3>NAME LAWYERS</h3>
+      <p>[Founder's Name], the visionary behind BCG Law Firm, is a seasoned legal professional with over [X] years of
+        experience in [specific areas of law]. A graduate of [Law School], [Founder's Name] has dedicated their career
+        to advancing the principles of justice, integrity, and excellence in legal practice.</p>
+      <p>[Founder's Vision]</p>
+      <p>Driven by a passion for making a positive impact in the legal field, [Founder's Name] founded BCG Law Firm with
+        the vision of creating a legal practice that goes beyond traditional norms. Their commitment to client-centric
+        service, ethical leadership, and community engagement has shaped the firm's values and contributed to its
+        success.</p>
+      <!-- <a class="btn custom-link">
+        Read More
+      </a> -->
+    </div>
+
+  </div>
 </div>
-<br><br><br><br><br>
+<br><br><br>
 
 <!-- <div class="container">
     <app-video-slider></app-video-slider>
 </div> -->
 
 <div class="blue-section">
-    <!-- <div class="testimoni-overlay"></div> -->
-    <!-- data-aos="fade-up" -->
-    <div class="container">
-        <div class="row d-flex align-items-center">
-            <div class="col-md-3 text-white">
-                <h2 class="small-title text-center">OUR LEGAL</h2>
-                <h2 class="small-title text-center">AVAILABLE SERVICES</h2>
-                <br><br>
-                <p style="text-align: justify;">Experience seamless living with our Burma Consultancy Group, where we seamlessly integrate reliable gas services, expert legal guidance, and unparalleled real estate solutions. From powering your ambitions to safeguarding your legal interests and unlocking property potential, we are your trusted all-in-one partner for success.
-                </p>
-            </div>
-            <div class="col-md-9">
-                <section class="slider">
-                    <owl-carousel-o [options]="customOptions" id="service-slider">
-                        <ng-template carouselSlide *ngFor="let service of serviceGroup">
-                            <div class="why-us-card" [routerLink]="['/service-detail', service.id ]">
-                                <h3>{{service.title_en}}</h3>
-                                <p [innerHTML]="service.description | slice:0:80"></p>
-                                <div class="work-post-gal" data-bs-toggle="modal"
-                                    data-bs-target="#exampleModal">
-                                    <div class="snip1192">
-                                        <blockquote>
-                                            <img src="assets/images/no-image.png" *ngIf="!service.image " class="img-fluid attachment-full">
-                                            <img [src]="linkUrl +  service.image  | safe:'url'" *ngIf="service.image" class="img-fluid attachment-full" style="height:280px;object-fit:cover;">
-                                            <!-- <img src="assets/images/Customer01.png"
+  <!-- <div class="testimoni-overlay"></div> -->
+  <!-- data-aos="fade-up" -->
+  <div class="container" id="service-section">
+    <div class="row d-flex align-items-center slide-section" id="service-section-slide-down">
+      <div class="col-md-3 text-white ">
+        <h2 class="small-title text-center">OUR LEGAL</h2>
+        <h2 class="small-title text-center">AVAILABLE SERVICES</h2>
+        <br><br>
+        <p style="text-align: justify;">Experience seamless living with our Burma Consultancy Group, where we seamlessly
+          integrate reliable gas services, expert legal guidance, and unparalleled real estate solutions. From powering
+          your ambitions to safeguarding your legal interests and unlocking property potential, we are your trusted
+          all-in-one partner for success.
+        </p>
+      </div>
+      <div class="col-md-9">
+        <section class="slider">
+          <owl-carousel-o [options]="customOptions" id="service-slider">
+            <ng-template carouselSlide *ngFor="let service of serviceGroup">
+              <div class="why-us-card" [routerLink]="['/service-detail', service.id ]">
+                <h3>{{service.title_en}}</h3>
+                <p [innerHTML]="service.description | slice:0:80"></p>
+                <div class="work-post-gal" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <div class="snip1192">
+                    <blockquote>
+                      <img src="assets/images/no-image.png" *ngIf="!service.image " class="img-fluid attachment-full">
+                      <img [src]="linkUrl +  service.image  | safe:'url'" *ngIf="service.image"
+                        class="img-fluid attachment-full" style="height:280px;object-fit:cover;">
+                      <!-- <img src="assets/images/Customer01.png"
                                                 alt="reviwe" width="100px"> -->
-                                        </blockquote>
-                                    </div>
-                                </div>
-                            </div>
-                        </ng-template>
-                        <!-- <ng-template carouselSlide>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+            <!-- <ng-template carouselSlide>
                             <div class="why-us-card">
                                 <h3>Company Registration</h3>
                                 <p>All the Lorem Ipsum generators on the Internet tend to predefined chunks as necessary</p>
@@ -209,7 +239,7 @@
                                     data-bs-target="#exampleModal2">
                                     <div class="snip1192">
                                         <blockquote>
-        
+
                                         </blockquote>
                                     </div>
                                 </div>
@@ -241,109 +271,119 @@
                                 </div>
                             </div>
                         </ng-template> -->
-        
-                    </owl-carousel-o>
-                </section>
-            </div>
-        </div>
-       
-        
+
+          </owl-carousel-o>
+        </section>
+      </div>
     </div>
+
+
+  </div>
 </div>
 <br><br>
-<section class="container my-md-5 my-1 care-bg careline-card text-white" >
-    <div class="row align-items-center">
-        <div class="col-md-12">
-            <h2 class="small-title text-center">Our Burma Consultancy Group</h2>
-            <h2 class="text-center">WHY CHOOSE US</h2>
-            <br>
-        </div>
-        <div class="col-md-4 col-12 d-flex justify-content-center align-items-center">
-            <img src="assets/images/chooseus.png" class="img-fluid" width="80%">
-
-        </div>
-        <div class="col-md-8 col-12">
-            <div class="p-md-4 p-2">
-                <h3 class="contact">Expertise and Specialization</h3>
-                <p class="my-3 foot-banner desc">
-                    Emphasize the depth of expertise within your firm and the specialization of your attorneys in various legal areas. Highlight specific cases or achievements that showcase your firm's ability to handle a diverse range of legal matters.
-                </p>
-                <h3 class="contact">
-                    Client-Centric Approach</h3>
-                <p class="my-3 foot-banner desc">
-                    Communicate your commitment to personalized and client-focused service. Explain how your firm takes the time to understand each client's unique situation, tailoring legal strategies to meet their specific needs. Mention your dedication to open communication and transparent processes.
-                </p>
-                <h3 class="contact">Proven Track Record</h3>
-                <p class="my-3 foot-banner desc">
-                    Showcase successful case outcomes and highlight your firm's track record of achieving positive results for clients. This can include notable victories, settlements, or testimonials from satisfied clients. Provide concrete examples of how your firm has made a difference for those you represent.
-                </p>
-                <h3 class="contact">Innovation and Strategic Thinking</h3>
-                <p class="my-3 foot-banner desc">
-                    Demonstrate your commitment to staying at the forefront of legal trends and adopting innovative solutions. Explain how your firm leverages cutting-edge strategies to address legal challenges, showing that you are adaptable and forward-thinking in your approach.
-                </p>
-                <h3 class="contact">Community Engagement and Values</h3>
-                <p class="my-3 foot-banner desc">
-                    Share information about your firm's involvement in community engagement, pro bono work, and social responsibility initiatives. Highlighting your commitment to ethical practices and contributing to the community can resonate with clients who value socially responsible businesses.
-                </p>
-            </div>
-        </div>
+<section class="container my-md-5 my-1 care-bg careline-card text-white">
+  <div class="row align-items-center">
+    <div class="col-md-12">
+      <h2 class="small-title text-center">Our Burma Consultancy Group</h2>
+      <h2 class="text-center">WHY CHOOSE US</h2>
+      <br>
     </div>
+    <div class="col-md-4 col-12 d-flex justify-content-center align-items-center">
+      <img src="assets/images/chooseus.png" class="img-fluid" width="80%">
+
+    </div>
+    <div class="col-md-8 col-12">
+      <div class="p-md-4 p-2">
+        <h3 class="contact fade-in-paragraph">Expertise and Specialization</h3>
+        <p class="my-3 foot-banner desc fade-in-paragraph">
+          Emphasize the depth of expertise within your firm and the specialization of your attorneys in various legal
+          areas. Highlight specific cases or achievements that showcase your firm's ability to handle a diverse range of
+          legal matters.
+        </p>
+        <h3 class="contact fade-in-paragraph">
+          Client-Centric Approach</h3>
+        <p class="my-3 foot-banner desc fade-in-paragraph">
+          Communicate your commitment to personalized and client-focused service. Explain how your firm takes the time
+          to understand each client's unique situation, tailoring legal strategies to meet their specific needs. Mention
+          your dedication to open communication and transparent processes.
+        </p>
+        <h3 class="contact fade-in-paragraph">Proven Track Record</h3>
+        <p class="my-3 foot-banner desc fade-in-paragraph">
+          Showcase successful case outcomes and highlight your firm's track record of achieving positive results for
+          clients. This can include notable victories, settlements, or testimonials from satisfied clients. Provide
+          concrete examples of how your firm has made a difference for those you represent.
+        </p>
+        <h3 class="contact">Innovation and Strategic Thinking</h3>
+        <p class="my-3 foot-banner desc">
+          Demonstrate your commitment to staying at the forefront of legal trends and adopting innovative solutions.
+          Explain how your firm leverages cutting-edge strategies to address legal challenges, showing that you are
+          adaptable and forward-thinking in your approach.
+        </p>
+        <h3 class="contact">Community Engagement and Values</h3>
+        <p class="my-3 foot-banner desc">
+          Share information about your firm's involvement in community engagement, pro bono work, and social
+          responsibility initiatives. Highlighting your commitment to ethical practices and contributing to the
+          community can resonate with clients who value socially responsible businesses.
+        </p>
+      </div>
+    </div>
+  </div>
 </section>
 <section>
-    <div class="row justify-content-center text-white">
-        <div class="col-md-8 col-12">
-            <div class="row">
-                <div class="col-md-4 col-6">
-                    <div class="d-flex justify-content-center">
-                        <div>
-                            <img src="assets/images/client.png" alt="" style="margin-right:15px;">
-                        </div>
-                        <div>
-                            <h3>9200+</h3>
-                            <p>Directory Listed</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-6">
-                    <div class="d-flex justify-content-center">
-                        <div>
-                            <img src="assets/images/client.png" alt="" style="margin-right:15px;">
-                        </div>
-                        <div>
-                            <h3>9200+</h3>
-                            <p>Happy Clients</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-6">
-                    <div class="d-flex justify-content-center">
-                        <div>
-                            <img src="assets/images/client.png" alt="" style="margin-right:15px;"s>
-                        </div>
-                        <div>
-                            <h3>9200+</h3>
-                            <p>Win Awards</p>
-                        </div>
-                    </div>
-                </div>
+  <div class="row justify-content-center text-white">
+    <div class="col-md-8 col-12">
+      <div class="row">
+        <div class="col-md-4 col-6">
+          <div class="d-flex justify-content-center">
+            <div>
+              <img src="assets/images/client.png" alt="" style="margin-right:15px;">
             </div>
+            <div>
+              <h3>9200+</h3>
+              <p>Directory Listed</p>
+            </div>
+          </div>
         </div>
+        <div class="col-md-4 col-6">
+          <div class="d-flex justify-content-center">
+            <div>
+              <img src="assets/images/client.png" alt="" style="margin-right:15px;">
+            </div>
+            <div>
+              <h3>9200+</h3>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-6">
+          <div class="d-flex justify-content-center">
+            <div>
+              <img src="assets/images/client.png" alt="" style="margin-right:15px;" s>
+            </div>
+            <div>
+              <h3>9200+</h3>
+              <p>Win Awards</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 <br><br>
 
 <section class="container">
-    <div class="row phonecontact">
-            <div class="col-md-9">
-                <p>
-                    Reach out to us via phone, email, or visit our office, and let us guide you through a seamless experience. At our Burma Consultancy Group, your satisfaction is our priority, and we look forward to hearing from you soon.
-                </p>
-            </div>
-            <div class="col-md-3 text-center">
-                <a class="custom-btn" [owlRouterLink]="'/contact-us'">
-                    CONTACT US NOW
-                </a>
-            </div>
-        </div>
+  <div class="row phonecontact">
+    <div class="col-md-9">
+      <p>
+        Reach out to us via phone, email, or visit our office, and let us guide you through a seamless experience. At
+        our Burma Consultancy Group, your satisfaction is our priority, and we look forward to hearing from you soon.
+      </p>
+    </div>
+    <div class="col-md-3 text-center">
+      <a class="custom-btn" [owlRouterLink]="'/contact-us'">
+        CONTACT US NOW
+      </a>
+    </div>
+  </div>
 </section>
-

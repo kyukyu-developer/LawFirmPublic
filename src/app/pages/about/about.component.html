@@ -14,9 +14,9 @@
   <br><br><br><br>
   <div class="container">
 
-    <div class="row">
+    <div class="row" id="aboutus-section">
       <!-- <div class="col-md-6" data-aos="zoom-out" data-aos-duration="30000"> -->
-      <div class="col-md-6">
+      <div class="col-md-6 slide-section" id="aboutus-section-slide-left">
         <div class="law-video" #target2>
           <img width="596" height="400" src="assets/images/aboutus.jpg" class="attachment-full" alt>
         </div>
@@ -49,7 +49,7 @@
 
       </div>
       <!-- data-aos="zoom-out" data-aos-duration="50000" -->
-      <div class="col-md-6">
+      <div class="col-md-6 slide-section" id="aboutus-section-slide-right">
         <div class="home-about">
 
           <h3>ABOUT US</h3>
@@ -162,30 +162,33 @@
     </div>
 
   </div>
+  <h2 class="small-title text-center text-white">ABOUT OF OUR SERVICES</h2>
   <div *ngFor="let item of aboutinfo; let i = index;" class="position-relative">
     <div *ngIf="i % 2 === 0; else oddIndex">
-      <div class="container law">
-        <div class="row justify-content-left about-law d-flex position-relative" style="padding: 60px 0;">
-          <div class="col-md-6" style="padding-top:40px;">
-            <h2 class="small-title text-white">WELCOME TO</h2>
+      <div class="container law" style="padding-top: 30px;">
+
+        <div class="row justify-content-left about-law d-flex">
+
+          <div class="col-md-6" style="padding-left: 80px;padding-top:40px;">
+            <!-- <h2 class="small-title text-white">WELCOME TO</h2> -->
             <h2 class="text-white" style="margin-bottom:30px;">{{item.title}}</h2>
             <!-- <h3>NAME LAWYERS</h3> -->
             <p [innerHTML]="item.description"></p>
-            <div *ngIf="item.contactInfo">
+            <div *ngIf="item.contactInfo" class="text-center" style="margin-top:65px;">
               <h3 style="color: #B8967E;font-size:18px;">Your satisfaction is our priority</h3>
+              <!-- <button type="submit" class="custom-btn mt-2"><span>{{item.contactInfo}}</span></button> -->
               <p class="section-content">
                 <a href="tel:+5284567592" class="cea-button-link">
                   <span class="cea-button-text"><i class="bi bi-telephone-fill me-1"></i> CALL US</span>
                   <span class="cea-button-num">{{item.contactInfo}}</span></a>
               </p>
             </div>
-
           </div>
           <div class="col-md-6">
             <img src="assets/images/law3.png" *ngIf="!item.image " class="img-fluid attachment-full">
-            <!-- <div class="position-relative" *ngIf="item.image" style="height: 400px;"> -->
-            <div style="position: relative;">
-              <div class="box one"></div>
+            <div class="position-relative" *ngIf="item.image" style="height: 350px;">
+              <div class="box one">
+              </div>
               <div class="box two"></div>
               <div class="box three" [style.background-image]="'url(' + linkUrl + item.image + ')'"></div>
             </div>
@@ -196,9 +199,9 @@
       </div>
     </div>
     <ng-template #oddIndex>
-      <div class="container law" style="margin-bottom: 100px;">
+      <div class="container law" style="padding-top: 30px;">
 
-        <div class="row justify-content-left about-law d-flex" style="padding: 60px 0;">
+        <div class="row justify-content-left about-law d-flex">
           <div class="col-md-6">
             <img src="assets/images/law3.png" *ngIf="!item.image " class="img-fluid attachment-full">
             <div class="position-relative" *ngIf="item.image" style="height: 350px;">
@@ -209,7 +212,7 @@
             </div>
           </div>
           <div class="col-md-6" style="padding-left: 80px;padding-top:40px;">
-            <h2 class="small-title text-white">WELCOME TO</h2>
+            <!-- <h2 class="small-title text-white">WELCOME TO</h2> -->
             <h2 class="text-white" style="margin-bottom:30px;">{{item.title}}</h2>
             <!-- <h3>NAME LAWYERS</h3> -->
             <p [innerHTML]="item.description"></p>
@@ -217,7 +220,7 @@
               <h3 style="color: #B8967E;font-size:18px;">Your satisfaction is our priority</h3>
               <!-- <button type="submit" class="custom-btn mt-2"><span>{{item.contactInfo}}</span></button> -->
               <p class="section-content">
-                <a href="tel:+5284567592" class="cea-button-link">
+                <a href="tel:item.contactInfo" class="cea-button-link">
                   <span class="cea-button-text"><i class="bi bi-telephone-fill me-1"></i> CALL US</span>
                   <span class="cea-button-num">{{item.contactInfo}}</span></a>
               </p>

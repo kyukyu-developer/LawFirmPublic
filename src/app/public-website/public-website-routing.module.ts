@@ -11,6 +11,7 @@ import { NewDetailsComponent } from '../pages/new-details/new-details.component'
 import { AboutComponent } from '../pages/about/about.component';
 import { ServicesComponent } from '../pages/services/services.component';
 import { PackageComponent } from '../package/package.component';
+import { SliderComponent } from '../pages/slider/slider.component';
 
 
 const routes: Routes = [
@@ -46,10 +47,10 @@ const routes: Routes = [
     path: 'promotion-detail/:id',
     component: PromotionDetailsComponent
   },
-   {
-     path: 'news',
-     component: NewsEventsComponent
-   },
+  {
+    path: 'news',
+    component: NewsEventsComponent
+  },
   {
     path: 'product',
     component: ProductComponent
@@ -58,11 +59,15 @@ const routes: Routes = [
     path: 'product-detail/:id',
     component: ProductDetailComponent
   },
-   {
+  {
     path: 'news-detail/:id',
-     component: NewDetailsComponent
-   },
-  
+    component: NewDetailsComponent
+  },
+  {
+    path: 'slider',
+    component: SliderComponent
+  },
+
 ];
 
 @NgModule({

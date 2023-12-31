@@ -23,6 +23,7 @@ import { InnerNewComponent } from './../elements/inner-new/inner-new.component';
 import { NewListComponent } from '../elements/new-list/new-list.component';
 import { AboutComponent } from '../pages/about/about.component';
 import { ServicesComponent } from '../pages/services/services.component';
+import { SliderComponent } from '../pages/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ServicesComponent } from '../pages/services/services.component';
     InnerNewComponent,
     NewListComponent,
     AboutComponent,
-    ServicesComponent
+    ServicesComponent,
+    SliderComponent
 
   ],
   imports: [

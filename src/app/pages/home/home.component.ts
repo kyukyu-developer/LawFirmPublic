@@ -23,19 +23,24 @@ export class HomeComponent implements OnInit {
   // loading = false
   // promotionData: any = []
 
-  vision : boolean = false
-  mission : boolean = true
-  value : boolean = false
+  vision: boolean = false
+  mission: boolean = true
+  value: boolean = false
 
   currentYear: any = ''
   isOpen = false;
-  serviceGroup : Service[] = []
+  serviceGroup: Service[] = []
 
   linkUrl: string = environment.linkUrl;
   defaultLoadingImage: string = environment.defaultLoadingImage;
   errorImage: string = environment.errorImage;
 
-  constructor(public shareService: SharedService, private Service : ServiceGroup) {
+  window_scroll: number = window.scrollY;
+  aboutusSectionScroll: number = 0;
+  founderSectionScroll: number = 0;
+  serviceSectionScroll: number = 0;
+
+  constructor(public shareService: SharedService, private Service: ServiceGroup) {
   }
 
   customOptions: OwlOptions = {
@@ -113,8 +118,79 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.getServiceGroup()
-    
 
+    const paragraphs = document.querySelectorAll('.fade-in-paragraph');
+
+    paragraphs.forEach((paragraph, index) => {
+      setTimeout(() => {
+        paragraph.classList.add('opacity');//= '1';
+      }, index * 1000); // Adjust the delay as needed
+    });
+
+    let aboutusSection = document.getElementById("aboutus-section") as HTMLHtmlElement;
+    let founderSection = document.getElementById("founder-section") as HTMLHtmlElement;
+    let serviceSection = document.getElementById("service-section") as HTMLHtmlElement;
+
+
+    // Add the onscroll event listener to the window
+    window.onscroll = (event: Event) => {
+      this.window_scroll = window.scrollY;
+      this.aboutusSectionScroll = 200;// aboutusSection.scrollTop;
+      this.founderSectionScroll = 1000;//founderSection.scrollTop;
+      this.serviceSectionScroll = 1200;
+      console.log(this.window_scroll, "scroll");
+      console.log(this.aboutusSectionScroll, "aboutusSectionScroll");
+      console.log(this.founderSectionScroll, "founderSectionScroll");
+
+      if (this.window_scroll >= this.aboutusSectionScroll && this.window_scroll < this.founderSectionScroll) {
+        this.slideLeftRight("aboutus-section", this.aboutusSectionScroll);
+      }
+      else if (this.window_scroll >= this.founderSectionScroll && this.window_scroll < this.serviceSectionScroll) {
+        this.slideLeftRight("founder-section", this.founderSectionScroll);
+      }
+      else if (this.window_scroll >= this.founderSectionScroll) {
+        this.slideDownUp("service-section", this.serviceSectionScroll);
+      }
+      else {
+        this.slideLeftRight("aboutus-section", this.aboutusSectionScroll);
+        this.slideLeftRight("founder-section", this.founderSectionScroll);
+        this.slideLeftRight("service-section", this.founderSectionScroll);
+      }
+    }
+  }
+  slideLeftRight(sectionName: string, threshold: number) {
+    const scroll: number = window.scrollY;
+    let slideLeft = document.getElementById(sectionName + '-slide-left') as HTMLHtmlElement;
+    let slideRight = document.getElementById(sectionName + '-slide-right') as HTMLHtmlElement;
+    // Add or remove classes based on scroll position
+    if (scroll > threshold) {
+      slideLeft.classList.remove('slide-out')
+      slideLeft.classList.add('slide-in');
+
+      slideRight.classList.remove('slide-out')
+      slideRight.classList.add('slide-in');
+
+    } else {
+      slideLeft.classList.add('slide-out')
+      slideLeft.classList.remove('slide-in');
+
+      slideRight.classList.add('slide-out')
+      slideRight.classList.remove('slide-in');
+    }
+  }
+
+  slideDownUp(sectionName: string, threshold: number) {
+    const scroll: number = window.scrollY;
+    let slideDown = document.getElementById(sectionName + '-slide-down') as HTMLHtmlElement;
+    // Add or remove classes based on scroll position
+    if (scroll > threshold) {
+      slideDown.classList.remove('slide-out')
+      slideDown.classList.add('slide-in');
+
+    } else {
+      slideDown.classList.add('slide-out')
+      slideDown.classList.remove('slide-in');
+    }
   }
 
 
@@ -124,34 +200,36 @@ export class HomeComponent implements OnInit {
   }
 
   scroll(el: any) {
-    el.scrollIntoView({behavior:"smooth"});
+    el.scrollIntoView({ behavior: "smooth" });
   }
 
-  getServiceGroup(){
+  getServiceGroup() {
     this.Service.getServiceGroup().toPromise().then((response: any) => {
-          this.serviceGroup = response;
-          console.log(this.serviceGroup, 'data')
-          //this.promotionData = data;
-        })
+      this.serviceGroup = response;
+      console.log(this.serviceGroup, 'data')
+      //this.promotionData = data;
+    })
   }
 
-  tabClick(param : any){
-    if(param == 'vision'){
+  tabClick(param: any) {
+    if (param == 'vision') {
       this.vision = true
       this.mission = false
       this.value = false
     }
-    if(param == 'mission'){
+    if (param == 'mission') {
       this.mission = true
       this.value = false
       this.vision = false
     }
-    if(param == 'value'){
+    if (param == 'value') {
       this.value = true
       this.vision = false
       this.mission = false
     }
   }
+
+
 
 
 
