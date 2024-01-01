@@ -44,6 +44,14 @@ export class ServicesComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
 
+
+
+    // this.getServiceGroup(this.activeroute)
+
+
+  }
+
+  ngOnInit(): void {
     this.active_route.paramMap.subscribe((params) => {
       const newServiceId = params.get('id');
       // if (this.activeroute !== newServiceId) {
@@ -57,6 +65,8 @@ export class ServicesComponent implements OnInit, AfterViewInit {
         .then((response: any) => {
           this.servicegroup = response;
           console.log(this.servicegroup, 'data');
+
+          this.idList = [];
 
           this.servicegroup.find(element => {
             if (element.section_type === 'Section Tab - Vertical') {
@@ -97,13 +107,6 @@ export class ServicesComponent implements OnInit, AfterViewInit {
         console.log(this.allservice, 'alldata')
       })
     });
-
-    // this.getServiceGroup(this.activeroute)
-
-
-  }
-
-  ngOnInit(): void {
   }
 
   customOptions: OwlOptions = {
