@@ -24,7 +24,7 @@
 
 </div>
 <a (click)="scroll(target2)" class="scroll-indicator d-flex text-center pt-1 page-scroll" id="scroll"
-  style="z-index: 10000; bottom: 3%;cursor:pointer;opacity: 0.5512;position:absolute;justify-content:center;left:50%;">
+  style="z-index:99; bottom: 3%;cursor:pointer;opacity: 0.5512;position:absolute;justify-content:center;left:50%;">
   <div class="bounce-arrow anchor bounce"></div>
 </a>
 <!-- <img src="assets/images/cloud-end.png" class="cloud ">
@@ -36,7 +36,7 @@
 <div class="container" style="margin-top:70px;">
   <div class="row" id="aboutus-section">
     <!-- <div class="col-md-6" data-aos="zoom-out" data-aos-duration="30000"> -->
-    <div class="col-md-6 slide-section" id="aboutus-section-slide-left">
+  <div class="col-md-6 slide-section" data-aos="fade-right">
       <div class="law-video" #target2>
         <img width="596" height="400" src="assets/images/aboutus.jpg" class="attachment-full" alt>
       </div>
@@ -69,7 +69,7 @@
 
     </div>
     <!-- data-aos="zoom-out" data-aos-duration="50000" -->
-    <div class="col-md-6 slide-section" id="aboutus-section-slide-right">
+    <div class="col-md-6 slide-section" data-aos="fade-left">
       <div class="home-about">
         <h3 class="fade-in-paragraph">ABOUT US</h3>
         <p class="middle-title">Empowering Success: Your Comprehensive Partner in Law</p>
@@ -151,7 +151,7 @@
   <!-- <h2 class="text-center text-white">Family Law</h2> -->
 
   <div class="row justify-content-left about-law d-flex align-items-top " id="founder-section">
-    <div class="col-md-4 slide-section" id="founder-section-slide-left">
+    <div class="col-md-4 slide-section" data-aos="zoom-in">
       <!-- <img src="assets/images/law2.png" alt="" class="img-fluid aboutlawyer"> -->
       <div style="position: relative;">
         <div class="box one"></div>
@@ -160,8 +160,8 @@
       </div>
 
     </div>
-    <div class="col-md-4 slide-section" id="founder-section-slide-right">
-      <h3>NAME LAWYERS</h3>
+    <div class="col-md-4 slide-section" data-aos="zoom-in">
+      <h3 style="font-size:19px;">NAME LAWYERS</h3>
       <p>[Founder's Name], the visionary behind BCG Law Firm, is a seasoned legal professional with over [X] years of
         experience in [specific areas of law]. A graduate of [Law School], [Founder's Name] has dedicated their career
         to advancing the principles of justice, integrity, and excellence in legal practice.</p>
@@ -186,8 +186,8 @@
 <div class="blue-section">
   <!-- <div class="testimoni-overlay"></div> -->
   <!-- data-aos="fade-up" -->
-  <div class="container" id="service-section">
-    <div class="row d-flex align-items-center slide-section" id="service-section-slide-down">
+  <div class="container" >
+    <div class="row d-flex align-items-center slide-section" data-aos="fade-up">
       <div class="col-md-3 text-white ">
         <h2 class="small-title text-center">OUR LEGAL</h2>
         <h2 class="small-title text-center">AVAILABLE SERVICES</h2>
@@ -293,22 +293,22 @@
 
     </div>
     <div class="col-md-8 col-12">
-      <div class="p-md-4 p-2">
-        <h3 class="contact fade-in-paragraph">Expertise and Specialization</h3>
-        <p class="my-3 foot-banner desc fade-in-paragraph">
+      <div class="p-md-4 p-2" data-aos="fade-left">
+        <h3 class="contact">Expertise and Specialization</h3>
+        <p class="my-3 foot-banner desc">
           Emphasize the depth of expertise within your firm and the specialization of your attorneys in various legal
           areas. Highlight specific cases or achievements that showcase your firm's ability to handle a diverse range of
           legal matters.
         </p>
-        <h3 class="contact fade-in-paragraph">
+        <h3 class="contact">
           Client-Centric Approach</h3>
-        <p class="my-3 foot-banner desc fade-in-paragraph">
+        <p class="my-3 foot-banner desc">
           Communicate your commitment to personalized and client-focused service. Explain how your firm takes the time
           to understand each client's unique situation, tailoring legal strategies to meet their specific needs. Mention
           your dedication to open communication and transparent processes.
         </p>
-        <h3 class="contact fade-in-paragraph">Proven Track Record</h3>
-        <p class="my-3 foot-banner desc fade-in-paragraph">
+        <h3 class="contact">Proven Track Record</h3>
+        <p class="my-3 foot-banner desc">
           Showcase successful case outcomes and highlight your firm's track record of achieving positive results for
           clients. This can include notable victories, settlements, or testimonials from satisfied clients. Provide
           concrete examples of how your firm has made a difference for those you represent.

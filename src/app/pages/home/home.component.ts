@@ -8,6 +8,7 @@ import { FAQService } from 'src/app/services/faq.service';
 import { ServiceGroup } from 'src/app/services/service.service';
 import { Service } from 'src/app/DTO/service.dto';
 import { environment } from 'src/environments/environment';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-home',
@@ -117,6 +118,7 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit(): void {
+    Aos.init()
     this.getServiceGroup()
 
     const paragraphs = document.querySelectorAll('.fade-in-paragraph');

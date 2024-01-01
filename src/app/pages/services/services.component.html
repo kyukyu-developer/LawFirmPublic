@@ -141,7 +141,7 @@
       </div>
       <!-- Information section with image -->
       <div *ngIf="item?.section_type === 'Information Section With Image'">
-        <div class="row d-flex position-relative" *ngIf="i % 2 === 0; else oddIndex" style="padding-top:25px">
+        <div class="row" *ngIf="i % 2 === 0; else oddIndex" style="padding-top:25px">
           <div class="col-md-6 position-relative">
             <img src="assets/images/no-image.png" *ngIf="!item.image" class="img-fluid attachment-full" />
             <div class="" *ngIf="item.image" style="height: 400px;margin-bottom:30px;">
@@ -163,7 +163,7 @@
           </div>
         </div>
         <ng-template #oddIndex>
-          <div class="row d-flex position-relative" style="padding-top:25px">
+          <div class="row" style="padding-top:25px">
             <div class="col-md-6">
               <div class="home-about">
                 <h3>{{ item.title }}</h3>
@@ -299,19 +299,15 @@
           </div>
         </div>
       </div>
-      <div *ngIf="item.section_type === 'Section Tab - Vertical'">
-        <div class="row">
-          <div class="col-md-12 home-about text-center">
-            <h3>{{ item?.title }}</h3>
-            <h4 class="subtitle" *ngIf="item.sub_title !=''">{{item.sub_title}}</h4>
-            <p *ngIf="item.description!=''" [innerHTML]="item.description"></p>
-          </div>
+      <div *ngIf="item.section_type === 'Section Tab - Vertical'" style="margin-bottom:30px;">
+        <div class="home-about text-center">
+        <h3>{{ item?.title }}</h3>
+        <h4 class="subtitle" *ngIf="item.sub_title !=''">{{item.sub_title}}</h4>
+        <p *ngIf="item.description!=''" [innerHTML]="item.description"></p>
         </div>
 
-        <div class="mb-0">
-          <div class="row mb-0">
-            <div class="col-md-4 mb-0">
-              <div>
+          <div class="row">
+            <div class="col-md-4">
                 <ul class="service-list">
                   <li *ngFor="let title_ of item.sectionlists;let i = index" (click)="getDetails(item.id,title_.id)">
                     <span>
@@ -319,25 +315,17 @@
                     </span>
                   </li>
                 </ul>
-              </div>
             </div>
-            <div class="col-md-8 mb-0">
+            <div class="col-md-8">
               <div class="service-img" style="margin-top: 0px" *ngFor="let title_ of item.sectionlists;let i = index">
                 <div class="home-about" style="padding-top:30px"
                   *ngIf="idList?.includes(item?.id +'-'+title_.id.toString())">
                   <h3 style="font-size: 19px"> {{ title_.title }}</h3>
                   <p [innerHTML]="title_.description"></p>
                 </div>
-
-                <!-- <div class="home-about" style="padding-top:30px" *ngIf="selectedList === 0 && i==0">
-                  <h3 style="font-size: 19px"> {{ title_.title }}</h3>
-                  <p [innerHTML]="title_.description"></p>
-                </div> -->
-
               </div>
             </div>
           </div>
-        </div>
 
       </div>
     </div>

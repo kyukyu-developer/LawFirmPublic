@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as Aos from 'aos';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { GeneralService } from 'src/app/services/general.service';
 import { environment } from 'src/environments/environment';
@@ -29,6 +30,7 @@ export class AboutComponent implements OnInit {
   constructor(public about: GeneralService) { }
 
   ngOnInit(): void {
+    Aos.init()
     this.getAllAbout()
     this.getMembers()
 
