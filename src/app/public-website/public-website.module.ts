@@ -6,7 +6,6 @@ import { CommonModule } from '@angular/common';
 import { PublicWebsiteRoutingModule } from './public-website-routing.module';
 import { SharedModule } from '../shared/shared/shared.module';
 import { HomeComponent } from '../pages/home/home.component';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ContactUsComponent } from '../pages/contact-us/contact-us.component';
@@ -24,6 +23,9 @@ import { NewListComponent } from '../elements/new-list/new-list.component';
 import { AboutComponent } from '../pages/about/about.component';
 import { ServicesComponent } from '../pages/services/services.component';
 import { SliderComponent } from '../pages/slider/slider.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { CustomSliderComponent } from '../pages/custom-slider/custom-slider.component';
+
 
 @NgModule({
   declarations: [
@@ -42,14 +44,15 @@ import { SliderComponent } from '../pages/slider/slider.component';
     NewListComponent,
     AboutComponent,
     ServicesComponent,
-    SliderComponent
+    SliderComponent,
+    CustomSliderComponent
 
   ],
   imports: [
+    CarouselModule,
     CommonModule,
     PublicWebsiteRoutingModule,
     SharedModule,
-    CarouselModule,
     FormsModule,
     ReactiveFormsModule,
   ],

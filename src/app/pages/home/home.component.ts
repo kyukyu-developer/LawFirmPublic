@@ -9,11 +9,24 @@ import { ServiceGroup } from 'src/app/services/service.service';
 import { Service } from 'src/app/DTO/service.dto';
 import { environment } from 'src/environments/environment';
 import * as Aos from 'aos';
+import { trigger, transition, style, animate , state} from '@angular/animations';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  animations: [
+    trigger('fadeInOut', [
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate('500ms', style({ opacity: 1 })),
+      ]),
+      transition(':leave', [
+        animate('500ms', style({ opacity: 0 })),
+      ]),
+    ]),
+  ],
 })
 export class HomeComponent implements OnInit {
   // @Input() title!: string;
@@ -41,8 +54,17 @@ export class HomeComponent implements OnInit {
   founderSectionScroll: number = 0;
   serviceSectionScroll: number = 0;
 
+  slides = [
+    { title: 'Slide 1', description: 'Description for Slide 1', image: '../../assets/images/banner.jpg' },
+    { title: 'Slide 2', description: 'Description for Slide 2', image: '../../assets/images/banner.jpg' },
+    // Add more slides as needed
+  ];
+
+  activeSlideIndex = 0;
+
   constructor(public shareService: SharedService, private Service: ServiceGroup) {
   }
+
 
   customOptions: OwlOptions = {
     loop: false,
@@ -81,9 +103,10 @@ export class HomeComponent implements OnInit {
     touchDrag: true,
     pullDrag: true,
     dots: false,
-    autoplay: true,
+    autoplay: false,
     navSpeed: 1000,
     navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+    animateOut: 'slideOutUp',
     responsive: {
       0: {
         items: 1,
@@ -229,6 +252,10 @@ export class HomeComponent implements OnInit {
       this.vision = false
       this.mission = false
     }
+  }
+
+  onSlideChanged(event: any): void {
+    this.activeSlideIndex = event.item.index;
   }
 
 

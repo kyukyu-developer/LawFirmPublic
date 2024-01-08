@@ -20,6 +20,8 @@ import { ImageSliderComponent } from './elements/image-slider/image-slider.compo
 import { PackageComponent } from './package/package.component';
 import { Router, RouterModule } from '@angular/router';
 import { FaqSectionComponent } from './elements/faq-section/faq-section.component';
+import { CustomSliderComponent } from './pages/custom-slider/custom-slider.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -35,10 +37,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     ImageSliderComponent,
     PackageComponent,
     FaqSectionComponent,
-    PackageComponent
+    PackageComponent,
 
   ],
   imports: [
+    CarouselModule,
     RouterModule,
     BrowserModule,
     SharedModule,
@@ -55,7 +58,7 @@ export function HttpLoaderFactory(http: HttpClient) {
       defaultLanguage: "en"
     }),
   ],
-  // schemas : [CUSTOM_ELEMENTS_SCHEMA],
+  schemas : [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HttpConfigInterceptor, multi: true }
   ],
