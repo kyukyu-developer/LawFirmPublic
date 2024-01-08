@@ -165,7 +165,7 @@
   <h2 class="small-title text-center text-white">ABOUT OF OUR SERVICES</h2>
   <div *ngFor="let item of aboutinfo; let i = index;" class="position-relative">
     <div *ngIf="i % 2 === 0; else oddIndex">
-      <div class="container law" style="padding-top: 30px;">
+      <div class="container law" style="padding-top: 30px;" data-aos="fade-up">
 
         <div class="row justify-content-left about-law d-flex">
 
@@ -199,7 +199,7 @@
       </div>
     </div>
     <ng-template #oddIndex>
-      <div class="container law" style="padding-top: 30px;">
+      <div class="container law" style="padding-top: 30px;" data-aos="fade-up">
 
         <div class="row justify-content-left about-law d-flex">
           <div class="col-md-6">
