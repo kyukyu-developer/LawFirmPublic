@@ -2,10 +2,10 @@
   <div class="h-100">
     <owl-carousel-o [options]="homebanner" id="home_slide" (change)="onSlideChanged($event)">
       <ng-template carouselSlide>
-        <div class="cover-background" style="background-image: url(../../../assets/images/banner.jpg)">
+        <div class="cover-background" style="background-image: url(../../../assets/images/banner-real-estate-.jpg)">
           <div class="container h-100">
-            <div class="row sliderr-row">
-              <div class="col-md-6" style="color:#fff;" data-aos="fade-up" data-aos-duration="1000">
+            <div class="row sliderr-row" animate__animated animate__fadeIn>
+              <div class="col-md-6" style="color:#fff;">
                 <div class="banner-text">
                   LEGAL EXPERTS
                 </div>
@@ -30,8 +30,8 @@
         <div class="cover-background"
           style="background-image: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
           <div class="container h-100">
-            <div class="row sliderr-row">
-              <div class="col-md-6" style="color:#fff;" data-aos="fade-up" data-aos-duration="1000">
+            <div class="row sliderr-row" animate__animated animate__fadeIn>
+              <div class="col-md-6" style="color:#fff;">
                 <div class="banner-text">
                   LEGAL EXPERTS
                 </div>
@@ -55,7 +55,6 @@
   </div>
 
 </div>
-<!-- <app-custom-slider></app-custom-slider> -->
 
 <a (click)="scroll(target2)" class="scroll-indicator d-flex text-center pt-1 page-scroll" id="scroll"
   style="z-index:99; bottom: 3%;cursor:pointer;opacity: 0.5512;position:absolute;justify-content:center;left:50%;">

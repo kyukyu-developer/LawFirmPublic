@@ -7,22 +7,15 @@ import { trigger, transition, style, animate , state} from '@angular/animations'
   templateUrl: './custom-slider.component.html',
   styleUrls: ['./custom-slider.component.scss'],
   animations: [
-    trigger('fadeInOut', [
-      state(
-        'in',
-        style({
-          opacity: 1,
-        })
-      ),
-      state(
-        'out',
-        style({
-          opacity: 0,
-        })
-      ),
-      transition('in => out', [animate('0.5s ease-out')]),
-      transition('out => in', [animate('0.5s ease-in')]),
-    ]),
+    trigger('slideInLeft', [
+      transition(':enter', [
+        style({ transform: 'translateX(-100%)' }),
+        animate('500ms ease-out', style({ transform: 'translateX(0)' })),
+      ]),
+      transition(":leave", [
+        animate('500ms ease-out', style({ transform: 'translateX(-100%)' })),
+      ])
+    ])
   ],
 })
 export class CustomSliderComponent {
@@ -36,7 +29,7 @@ export class CustomSliderComponent {
     autoplayTimeout: 2000,
   };
 
-  carouselItems = [
+  items = [
     {
       image: 'https://cdn.pixabay.com/photo/2017/10/24/10/30/business-2884023_960_720.jpg',
       alt: 'Image 1',

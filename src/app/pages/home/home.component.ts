@@ -98,7 +98,7 @@ export class HomeComponent implements OnInit {
   }
 
   homebanner: OwlOptions = {
-    loop: false,
+    loop: true,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
@@ -106,7 +106,10 @@ export class HomeComponent implements OnInit {
     autoplay: false,
     navSpeed: 1000,
     navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
-    animateOut: 'slideOutUp',
+    animateIn: 'fake',
+    animateOut: 'fake',
+    autoplaySpeed: 800,
+    autoplayTimeout: 5000,
     responsive: {
       0: {
         items: 1,
