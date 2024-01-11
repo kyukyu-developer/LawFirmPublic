@@ -301,31 +301,32 @@
       </div>
       <div *ngIf="item.section_type === 'Section Tab - Vertical'" style="margin-bottom:30px;">
         <div class="home-about text-center">
-        <h3>{{ item?.title }}</h3>
-        <h4 class="subtitle" *ngIf="item.sub_title !=''">{{item.sub_title}}</h4>
-        <p *ngIf="item.description!=''" [innerHTML]="item.description"></p>
+          <h3>{{ item?.title }}</h3>
+          <h4 class="subtitle" *ngIf="item.sub_title !=''">{{item.sub_title}}</h4>
+          <p *ngIf="item.description!=''" [innerHTML]="item.description"></p>
         </div>
 
-          <div class="row">
-            <div class="col-md-4">
-                <ul class="service-list">
-                  <li *ngFor="let title_ of item.sectionlists;let i = index" (click)="getDetails(item.id,title_.id)">
-                    <span>
-                      <img src="assets/images/slist.png" alt="" />{{ title_.title }}
-                    </span>
-                  </li>
-                </ul>
-            </div>
-            <div class="col-md-8">
-              <div class="service-img" style="margin-top: 0px" *ngFor="let title_ of item.sectionlists;let i = index">
-                <div class="home-about" style="padding-top:30px"
-                  *ngIf="idList?.includes(item?.id +'-'+title_.id.toString())">
-                  <h3 style="font-size: 19px"> {{ title_.title }}</h3>
-                  <p [innerHTML]="title_.description"></p>
-                </div>
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="service-list">
+              <li *ngFor="let title_ of item.sectionlists;let i = index" (click)="getDetails(item.id,title_.id)">
+                <span>
+                  <img src="assets/images/slist.png" alt="" />{{ title_.title }}
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-8">
+            <div class="service-img" style="margin-top: 0px" *ngFor="let title_ of item.sectionlists;let i = index">
+              <div class="home-about" style="padding-top:30px"
+                *ngIf="idList?.includes(item?.id +'-'+title_.id.toString())">
+                <h3 style="font-size: 19px"> {{ title_.title }}</h3>
+
+                <div [innerHTML]="title_.description"></div>
               </div>
             </div>
           </div>
+        </div>
 
       </div>
     </div>

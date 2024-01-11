@@ -9,33 +9,84 @@ import { ServiceGroup } from 'src/app/services/service.service';
 import { Service } from 'src/app/DTO/service.dto';
 import { environment } from 'src/environments/environment';
 import * as Aos from 'aos';
-import { trigger, transition, style, animate , state} from '@angular/animations';
+import { trigger, transition, style, animate, state } from '@angular/animations';
 
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  animations: [
-    trigger('fadeInOut', [
-      transition(':enter', [
-        style({ opacity: 0 }),
-        animate('500ms', style({ opacity: 1 })),
-      ]),
-      transition(':leave', [
-        animate('500ms', style({ opacity: 0 })),
-      ]),
-    ]),
-  ],
 })
 export class HomeComponent implements OnInit {
-  // @Input() title!: string;
-  // @Input() content!: string;
-  // hide: boolean = false
-  // accordionItems: any = []
-  // submitted = false;
-  // loading = false
-  // promotionData: any = []
+
+  //  carousel items array
+  carouselItems = [
+    { url: '../../../assets/images/banner.jpg', title_1: 'LEGAL EXPERTS', title_2: 'Focused on Client Based Law Firm', description: " Focused on Client Based Law Firm',description : ' At Burma Consultancy Group, our mission is to deliver exceptional legal counsel and representation with unwavering dedication to our clients' success. " },
+    { url: '../../../assets/images/cover_gas.jpg', title_1: 'LEGAL EXPERTS', title_2: 'Item 1', description: '' },
+    { url: '../../../assets/images/cover_realestate.jpg', title_1: 'LEGAL EXPERTS', title_2: 'Item 1', description: '' },
+    { url: '../../../assets/images/cover_Institute.jpg', title_1: 'LEGAL EXPERTS', title_2: 'Item 1', description: '' },
+    // Add more items as needed
+  ];
+
+
+
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    autoplay: true,
+    dots: false,
+    navSpeed: 500,
+    margin: 10,
+    // navText: ['&#8249', '&#8250;'],
+    navText: [
+      '<img src="assets/images/is-less-than.png" width="40px" alt="">',
+      ' <img src="assets/images/is-greater-than.png" width="40px" alt="">'
+    ],
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      760: {
+        items: 3
+      },
+      1000: {
+        items: 3
+      }
+    },
+    nav: false
+  }
+
+  homebanner: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    autoplay: true,
+    navSpeed: 1000,
+    navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+    animateOut: 'slideOutUp',
+    responsive: {
+      0: {
+        items: 1,
+      },
+      400: {
+        items: 1,
+      },
+      740: {
+        items: 1,
+      },
+      940: {
+        items: 1,
+      },
+    },
+    nav: true
+  };
 
   vision: boolean = false
   mission: boolean = true
@@ -65,66 +116,6 @@ export class HomeComponent implements OnInit {
   constructor(public shareService: SharedService, private Service: ServiceGroup) {
   }
 
-
-  customOptions: OwlOptions = {
-    loop: false,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true,
-    autoplay: true,
-    dots: true,
-    navSpeed: 600,
-    margin: 10,
-    // navText: ['&#8249', '&#8250;'],
-    navText: [
-      '<img src="assets/images/is-less-than.png" width="40px" alt="">',
-      ' <img src="assets/images/is-greater-than.png" width="40px" alt="">'
-    ],
-    responsive: {
-      0: {
-        items: 1
-      },
-      400: {
-        items: 2
-      },
-      760: {
-        items: 3
-      },
-      1000: {
-        items: 3
-      }
-    },
-    nav: false
-  }
-
-  homebanner: OwlOptions = {
-    loop: false,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true,
-    dots: false,
-    autoplay: false,
-    navSpeed: 1000,
-    navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
-    animateOut: 'slideOutUp',
-    responsive: {
-      0: {
-        items: 1,
-      },
-      400: {
-        items: 1,
-      },
-      740: {
-        items: 1,
-      },
-      940: {
-        items: 1,
-      },
-    },
-    nav: true,
-  };
-
-
   toggleAccordion() {
     this.isOpen = !this.isOpen;
   }
@@ -143,79 +134,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     Aos.init()
     this.getServiceGroup()
-
-    const paragraphs = document.querySelectorAll('.fade-in-paragraph');
-
-    paragraphs.forEach((paragraph, index) => {
-      setTimeout(() => {
-        paragraph.classList.add('opacity');//= '1';
-      }, index * 1000); // Adjust the delay as needed
-    });
-
-    let aboutusSection = document.getElementById("aboutus-section") as HTMLHtmlElement;
-    let founderSection = document.getElementById("founder-section") as HTMLHtmlElement;
-    let serviceSection = document.getElementById("service-section") as HTMLHtmlElement;
-
-
-    // Add the onscroll event listener to the window
-    window.onscroll = (event: Event) => {
-      this.window_scroll = window.scrollY;
-      this.aboutusSectionScroll = 200;// aboutusSection.scrollTop;
-      this.founderSectionScroll = 1000;//founderSection.scrollTop;
-      this.serviceSectionScroll = 1200;
-      console.log(this.window_scroll, "scroll");
-      console.log(this.aboutusSectionScroll, "aboutusSectionScroll");
-      console.log(this.founderSectionScroll, "founderSectionScroll");
-
-      if (this.window_scroll >= this.aboutusSectionScroll && this.window_scroll < this.founderSectionScroll) {
-        this.slideLeftRight("aboutus-section", this.aboutusSectionScroll);
-      }
-      else if (this.window_scroll >= this.founderSectionScroll && this.window_scroll < this.serviceSectionScroll) {
-        this.slideLeftRight("founder-section", this.founderSectionScroll);
-      }
-      else if (this.window_scroll >= this.founderSectionScroll) {
-        this.slideDownUp("service-section", this.serviceSectionScroll);
-      }
-      else {
-        this.slideLeftRight("aboutus-section", this.aboutusSectionScroll);
-        this.slideLeftRight("founder-section", this.founderSectionScroll);
-        this.slideLeftRight("service-section", this.founderSectionScroll);
-      }
-    }
-  }
-  slideLeftRight(sectionName: string, threshold: number) {
-    const scroll: number = window.scrollY;
-    let slideLeft = document.getElementById(sectionName + '-slide-left') as HTMLHtmlElement;
-    let slideRight = document.getElementById(sectionName + '-slide-right') as HTMLHtmlElement;
-    // Add or remove classes based on scroll position
-    if (scroll > threshold) {
-      slideLeft.classList.remove('slide-out')
-      slideLeft.classList.add('slide-in');
-
-      slideRight.classList.remove('slide-out')
-      slideRight.classList.add('slide-in');
-
-    } else {
-      slideLeft.classList.add('slide-out')
-      slideLeft.classList.remove('slide-in');
-
-      slideRight.classList.add('slide-out')
-      slideRight.classList.remove('slide-in');
-    }
-  }
-
-  slideDownUp(sectionName: string, threshold: number) {
-    const scroll: number = window.scrollY;
-    let slideDown = document.getElementById(sectionName + '-slide-down') as HTMLHtmlElement;
-    // Add or remove classes based on scroll position
-    if (scroll > threshold) {
-      slideDown.classList.remove('slide-out')
-      slideDown.classList.add('slide-in');
-
-    } else {
-      slideDown.classList.add('slide-out')
-      slideDown.classList.remove('slide-in');
-    }
   }
 
 
@@ -254,8 +172,24 @@ export class HomeComponent implements OnInit {
     }
   }
 
+
   onSlideChanged(event: any): void {
-    this.activeSlideIndex = event.item.index;
+    var homeSliderInfo = document.querySelectorAll('.home-slider-info-text');
+    homeSliderInfo.forEach(async (sliderInfo, index) => {
+      sliderInfo.classList.add('aos-animate');
+      // Use 'await' to introduce a delay of 3 seconds
+      await this.delay(4);
+      sliderInfo.classList.remove('aos-animate');
+
+    });
+  }
+
+  delay(seconds: number): Promise<void> {
+    return new Promise<void>((resolve) => {
+      setTimeout(() => {
+        resolve();
+      }, seconds * 1000); // Convert seconds to milliseconds
+    });
   }
 
 
