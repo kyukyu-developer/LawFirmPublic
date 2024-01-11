@@ -1,11 +1,9 @@
-<owl-carousel-o [options]="carouselOptions" (change)="onSlideChange($event)">
-  <ng-container *ngFor="let item of carouselItems; let i = index">
+<owl-carousel-o [options]="carouselOptions">
+  <ng-container *ngFor="let item of items;">
     <div class="item">
       <img [src]="item.image" alt="{{ item.alt }}" />
-      <div class="text" [@fadeInOut]="currentIndex === i ? 'in' : 'out'">
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.description }}</p>
-      </div>
+      <h3 class="animate__animated animate__fadeIn">{{ item.title }}</h3>
+      <p class="animate__animated animate__fadeIn">{{ item.description }}</p>
     </div>
   </ng-container>
 </owl-carousel-o>

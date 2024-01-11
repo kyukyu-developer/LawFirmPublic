@@ -17,4 +17,23 @@
         color: #fff;
         opacity: 0;
       }
+
+      .owl-carousel {
+        width: 100%;
+        text-align: center;
+      }
+      
+      .owl-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px; /* Adjust the height as needed */
+      }
+      
+      .item {
+        background-color: #eee;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
     

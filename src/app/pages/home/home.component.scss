@@ -796,6 +796,10 @@ HEAD .hover-box {
   // background-position: center;
 }
 
+.banner-text {
+  text-shadow: 1px 1px #bd9d4f;
+}
+
 .testimoni-overlay {
   background: #0000008c;
   position: absolute;
@@ -1248,6 +1252,7 @@ a.custom-link::after {
   font-size: 27px;
   font-weight: 600;
   margin: 30px 0;
+  text-shadow: 2px 2px #bd9d4f;
 }
 
 .sliderr-row {
