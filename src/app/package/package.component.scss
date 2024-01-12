@@ -162,3 +162,22 @@ text-decoration: unset;
 a.custom-btn.fill:hover{
     background-color: #ffffff1f !important;
 }
+
+@media only screen and (max-width: 768px) {
+    .page_banner{
+        height:50vh;
+    }
+    .decoration_wrap{
+        width:100%;
+    }
+
+    .bg{
+        margin-top:80px;
+    }
+    ul{
+        padding-bottom:40px;
+    }
+    .service-content{
+        margin-bottom:40px;
+    }
+}  

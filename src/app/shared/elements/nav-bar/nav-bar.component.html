@@ -17,16 +17,19 @@
             <p>About Us</p>
         </div>
         <div class="w-100" style="text-align: center;">
-            <p>Services</p>
-            <!-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <p (click)="showdrop()">Services</p>
+           
+        </div>
+        <div class="w-100" style="text-align: center;" *ngIf="dropmenu">
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li *ngFor="let service of serviceGroup">
-                  <a class="dropdown-item" [owlRouterLink]="['/service-detail',  service.id]">{{service.title_en}}</a></li>
-              </ul> -->
+                  <a class="dropdown-item" [owlRouterLink]="['/service-detail',  service.id ]">{{service.title_en}}</a></li>
+              </ul>
         </div>
         <div class="w-100" style="text-align: center;" [owlRouterLink]="'/packages'" [ngClass]="{ 'active': routeLink.includes('packages')}">
             <p>Packages</p>
         </div>
-        <div class="w-100" style="text-align: center;" [owlRouterLink]="'/contact'" [ngClass]="{ 'active': routeLink.includes('contact')}">
+        <div class="w-100" style="text-align: center;" [owlRouterLink]="'/contact-us'" [ngClass]="{ 'active': routeLink.includes('contact')}">
             <p>Contact Us</p>
         </div>
 

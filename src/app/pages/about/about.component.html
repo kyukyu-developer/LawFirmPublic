@@ -11,7 +11,7 @@
       </div>
     </section>
   </div>
-  <br><br><br><br>
+  <section>
   <div class="container">
 
     <div class="row">
@@ -20,7 +20,7 @@
         <div class="law-video" #target2>
           <img width="596" height="400" src="assets/images/aboutus.jpg" class="attachment-full" alt>
         </div>
-        <div class="d-flex little-txt">
+        <div class="little-txt">
           <!-- <div class="custom-txt">
                         <p></p>
                     </div>
@@ -122,7 +122,8 @@
     </div>
 
   </div>
-  <br><br><br><br><br>
+</section>
+<section>
   <div class="container" style="position: relative;margin-bottom:350px;">
     <div class="bg">
       <section class="slider">
@@ -162,6 +163,9 @@
     </div>
 
   </div>
+</section>
+<br>
+<section style="margin-top:20px;">
   <h2 class="small-title text-center text-white">ABOUT OF OUR SERVICES</h2>
   <div *ngFor="let item of aboutinfo; let i = index;" class="position-relative">
     <div *ngIf="i % 2 === 0; else oddIndex">
@@ -169,7 +173,7 @@
 
         <div class="row justify-content-left about-law d-flex">
 
-          <div class="col-md-6" style="padding-left: 80px;padding-top:40px;">
+          <div class="col-md-6 our-ser">
             <!-- <h2 class="small-title text-white">WELCOME TO</h2> -->
             <h2 class="text-white" style="margin-bottom:30px;">{{item.title}}</h2>
             <!-- <h3>NAME LAWYERS</h3> -->
@@ -211,7 +215,7 @@
               <div class="box three" [style.background-image]="'url(' + linkUrl + item.image + ')'"></div>
             </div>
           </div>
-          <div class="col-md-6" style="padding-left: 80px;padding-top:40px;">
+          <div class="col-md-6 our-serr">
             <!-- <h2 class="small-title text-white">WELCOME TO</h2> -->
             <h2 class="text-white" style="margin-bottom:30px;">{{item.title}}</h2>
             <!-- <h3>NAME LAWYERS</h3> -->
@@ -234,11 +238,12 @@
 
     </ng-template>
   </div>
-
+</section>
+<br><br>
 </div>
 
-<br><br><br><br>
-<section class="container">
+<section style="margin:40px 0;">
+  <div class="container">
   <div class="row phonecontact">
     <div class="col-md-9">
       <p>
@@ -252,4 +257,5 @@
       </a>
     </div>
   </div>
+</div>
 </section>
