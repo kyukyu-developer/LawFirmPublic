@@ -262,3 +262,31 @@ textarea.form-control {
     border: 1px solid #151515;
     color:#fff;
 }
+
+section{
+  margin-top:80px;
+  margin-bottom:80px;
+}
+
+@media only screen and (max-width: 768px) {
+  .message-btn{
+    width:100%;
+    margin-bottom:30px;
+  }
+  .contact-one{
+    margin-top:0;
+  }
+  .contact{
+    padding:20px;
+  }
+  .page_banner{
+    height:50vh;
+}
+.decoration_wrap{
+    width:100%;
+}
+.contact-info{
+  padding:15px 0 15px 0;
+  margin-bottom:15px;
+}
+}

@@ -439,3 +439,32 @@ a.custom-btn.fill:hover {
 #founder-section-slide-right.slide-out {
   transform: translateX(100%);
 }
+
+.little-txt{
+  display:flex;
+}
+
+.our-ser,.our-serr{
+  padding-left: 80px;padding-top:40px;
+}
+
+@media only screen and (max-width: 768px) {
+  .our-serr{
+    padding:0 15px;
+    margin-top:90px;
+  }
+  .our-ser{
+    padding:0 15px;
+  }
+  .law-video{
+    padding:0;
+    margin-bottom:25px;
+  }
+  .little-txt{
+    display: unset;
+    text-align: center;
+    img{
+      display:none;
+    }
+  }
+}
