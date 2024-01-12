@@ -1,97 +1,20 @@
 <div class="home-slider">
   <div class="h-100">
     <owl-carousel-o [options]="homebanner" (changed)="onSlideChanged($event)">
-      <ng-container>
+      <ng-container *ngFor="let slide of carouselData">
         <ng-template class="slide" carouselSlide>
-          <div class="cover-background" style="background-image: url(../../../assets/images/banner.jpg)">
+          <div class="cover-background" [style.background-image]="'url(' + slide.url + ')'">
             <div class="container h-100">
               <div class="row sliderr-row">
                 <div class="col-md-6 " style="color:#fff;">
                   <div class="banner-text home-slider-info-text" data-aos="zoom-in-right" data-aos-duration="1000">
-                    LEGAL EXPERTS
+                    {{slide.title_1}}
                   </div>
                   <div class="banner-title home-slider-info-text" data-aos="zoom-in-left" data-aos-duration="1000">
-                    Focused on Client Based Law Firm
+                    {{slide.title_2}}
                   </div>
                   <div class="banner-text home-slider-info-text" data-aos="fade-down-left" data-aos-duration="1000">
-                    At Burma Consultancy Group, our mission is to deliver exceptional legal counsel and representation
-                    with
-                    unwavering dedication to our clients' success.
-                  </div>
-                </div>
-                <div class="col-md-6">
-
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </ng-template>
-        <ng-template class="slide" carouselSlide>
-          <div class="cover-background" style="background-image: url(../../../assets/images/cover_gas.jpg)">
-            <div class="container h-100">
-              <div class="row sliderr-row">
-                <div class="col-md-6 " style="color:#fff;">
-                  <div class="banner-text home-slider-info-text" data-aos="zoom-in-right" data-aos-duration="1000">
-                    LEGAL EXPERTS
-                  </div>
-                  <div class="banner-title home-slider-info-text" data-aos="zoom-in-left" data-aos-duration="1000">
-                    Focused on Client Based Law Firm
-                  </div>
-                  <div class="banner-text home-slider-info-text" data-aos="fade-down-left" data-aos-duration="1000">
-                    At Burma Consultancy Group, our mission is to deliver exceptional legal counsel and representation
-                    with
-                    unwavering dedication to our clients' success.
-                  </div>
-                </div>
-                <div class="col-md-6">
-
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </ng-template>
-        <ng-template class="slide" carouselSlide>
-          <div class="cover-background" style="background-image: url(../../../assets/images/cover_realestate.jpg)">
-            <div class="container h-100">
-              <div class="row sliderr-row">
-                <div class="col-md-6 " style="color:#fff;">
-                  <div class="banner-text home-slider-info-text" data-aos="zoom-in-right" data-aos-duration="1000">
-                    LEGAL EXPERTS
-                  </div>
-                  <div class="banner-title home-slider-info-text" data-aos="zoom-in-left" data-aos-duration="1000">
-                    Focused on Client Based Law Firm
-                  </div>
-                  <div class="banner-text home-slider-info-text" data-aos="fade-down-left" data-aos-duration="1000">
-                    At Burma Consultancy Group, our mission is to deliver exceptional legal counsel and representation
-                    with
-                    unwavering dedication to our clients' success.
-                  </div>
-                </div>
-                <div class="col-md-6">
-
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </ng-template>
-        <ng-template class="slide" carouselSlide>
-          <div class="cover-background" style="background-image: url(../../../assets/images/cover_Institute.jpg)">
-            <div class="container h-100">
-              <div class="row sliderr-row">
-                <div class="col-md-6 " style="color:#fff;">
-                  <div class="banner-text home-slider-info-text" data-aos="zoom-in-right" data-aos-duration="1000">
-                    LEGAL EXPERTS
-                  </div>
-                  <div class="banner-title home-slider-info-text" data-aos="zoom-in-left" data-aos-duration="1000">
-                    Focused on Client Based Law Firm
-                  </div>
-                  <div class="banner-text home-slider-info-text" data-aos="fade-down-left" data-aos-duration="1000">
-                    At Burma Consultancy Group, our mission is to deliver exceptional legal counsel and representation
-                    with
-                    unwavering dedication to our clients' success.
+                    {{slide.description}}
                   </div>
                 </div>
                 <div class="col-md-6">
@@ -103,6 +26,7 @@
           </div>
         </ng-template>
       </ng-container>
+
     </owl-carousel-o>
   </div>
 </div>
