@@ -11,6 +11,12 @@ import { environment } from 'src/environments/environment';
 import * as Aos from 'aos';
 import { trigger, transition, style, animate, state } from '@angular/animations';
 
+export interface carouselItem {
+  url?: string;
+  title_1?: string;
+  title_2?: string;
+  description?: string;
+}
 
 @Component({
   selector: 'app-home',
@@ -20,15 +26,13 @@ import { trigger, transition, style, animate, state } from '@angular/animations'
 export class HomeComponent implements OnInit {
 
   //  carousel items array
-  carouselItems = [
-    { url: '../../../assets/images/banner.jpg', title_1: 'LEGAL EXPERTS', title_2: 'Focused on Client Based Law Firm', description: " Focused on Client Based Law Firm',description : ' At Burma Consultancy Group, our mission is to deliver exceptional legal counsel and representation with unwavering dedication to our clients' success. " },
-    { url: '../../../assets/images/cover_gas.jpg', title_1: 'LEGAL EXPERTS', title_2: 'Item 1', description: '' },
-    { url: '../../../assets/images/cover_realestate.jpg', title_1: 'LEGAL EXPERTS', title_2: 'Item 1', description: '' },
-    { url: '../../../assets/images/cover_Institute.jpg', title_1: 'LEGAL EXPERTS', title_2: 'Item 1', description: '' },
+  carouselData: carouselItem[] = [
+    { url: '../../../assets/images/banner.jpg', title_1: 'BURMA CONSULTANCY GROUP', title_2: 'Royal Law Firm', description: "At The Royal Law Firm, we are dedicated to providing unparalleled legal services with a commitment to excellence, integrity, and innovation. As a leading law firm, we pride ourselves on our passion for the law and our unwavering dedication to our clients." },
+    { url: '../../../assets/images/cover_gas.jpg', title_1: 'BURMA CONSULTANCY GROUP', title_2: 'Tharaphu Gas', description: "At Tharaphu Gas, we take immense pride in providing top-tier LPG gas solutions for all your needs. Whether you're a commercial enterprise, a wholesaler, or an individual looking for retail LPG solutions, we've got you covered." },
+    { url: '../../../assets/images/cover_realestate.jpg', title_1: 'BURMA CONSULTANCY GROUP', title_2: 'BCG Real Estate', description: "Welcome to Burma Consultancy Group Real Estate, your dedicated partners in the world of real estate." },
+    { url: '../../../assets/images/cover_Institute.jpg', title_1: 'BURMA CONSULTANCY GROUP', title_2: 'BCG Institute', description: "At BCG Institute, we are dedicated to empowering the youth of Myanmar through affordable, high-quality education in business, management, and career enhancement." },
     // Add more items as needed
   ];
-
-
 
   customOptions: OwlOptions = {
     loop: true,
@@ -116,31 +120,15 @@ export class HomeComponent implements OnInit {
   constructor(public shareService: SharedService, private Service: ServiceGroup) {
   }
 
-  toggleAccordion() {
-    this.isOpen = !this.isOpen;
-  }
-
   goRoute(route: string) {
     this.shareService.router.navigate(['/' + route])
   }
-
-
-  goSection(route: any) {
-    const element = document.getElementById(route) as HTMLElement;
-    element.scrollIntoView();
-  }
-
 
   ngOnInit(): void {
     Aos.init()
     this.getServiceGroup()
   }
 
-
-  getCurrentYear() {
-    let date = new Date()
-    this.currentYear = date.getFullYear()
-  }
 
   scroll(el: any) {
     el.scrollIntoView({ behavior: "smooth" });
@@ -171,7 +159,6 @@ export class HomeComponent implements OnInit {
       this.mission = false
     }
   }
-
 
   onSlideChanged(event: any): void {
     var homeSliderInfo = document.querySelectorAll('.home-slider-info-text');
