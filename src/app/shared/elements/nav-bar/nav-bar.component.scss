@@ -323,7 +323,14 @@
   }
 
   .nav.navWhite .logo {
-    margin-left: 119%;
+    margin-left: 0;
+  }
+  .dropdown-menu{
+    position: relative;
+    display:unset;
+  }
+  a.dropdown-item{
+    font-size:13px;
   }
 }
 
