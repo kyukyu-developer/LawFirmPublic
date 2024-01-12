@@ -48,7 +48,6 @@ export class NavBarComponent implements OnInit {
     let mainNav = document.getElementById('mainNav') as HTMLElement
 
     if (window.screen.width > 768) {
-      if (window.location.pathname == '/') {
 
         var currentScrollPos = window.pageYOffset;
         if (currentScrollPos < 80) {
@@ -60,9 +59,7 @@ export class NavBarComponent implements OnInit {
         }
         prevScrollpos = currentScrollPos;
 
-      } else {
-        mainNav.classList.add('navWhite')
-      }
+      
     } else {
       mainNav.classList.add('navWhite')
     }
@@ -122,6 +119,7 @@ export class NavBarComponent implements OnInit {
 
 
   ngOnInit(): void {
+  
 
     this.language = 'mm'
     // if (localStorage.getItem('language')) {
