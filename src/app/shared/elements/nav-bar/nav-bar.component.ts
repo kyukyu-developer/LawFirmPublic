@@ -20,6 +20,7 @@ import { ServiceGroup } from 'src/app/services/service.service';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
+  dropmenu:boolean = false
   routeLink: string = "";
   activeLanguageMenu: boolean = true;
   sidebar: boolean = false;
@@ -73,6 +74,10 @@ export class NavBarComponent implements OnInit {
     const element = document.getElementById(route) as HTMLElement;
     element.scrollIntoView();
     this.closeSideBar();
+  }
+
+  showdrop(){
+    this.dropmenu = !this.dropmenu
   }
 
 
