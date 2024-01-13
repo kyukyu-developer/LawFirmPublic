@@ -1,20 +1,21 @@
 <div class="home-slider">
   <div class="h-100">
     <owl-carousel-o [options]="homebanner" (changed)="onSlideChanged($event)">
-      <ng-container *ngFor="let slide of carouselData">
+      <ng-container *ngFor="let slide of coverBanners">
         <ng-template class="slide" carouselSlide>
-          <div class="cover-background" [style.background-image]="'url(' + slide.url + ')'">
+          <div class="cover-background" [style.background-image]="'url(' + linkUrl + slide.image + ')'">
             <div class="container h-100">
               <div class="row sliderr-row">
                 <div class="col-md-6 " style="color:#fff;">
                   <div class="banner-text home-slider-info-text" data-aos="zoom-in-right" data-aos-duration="1000">
-                    {{slide.title_1}}
+                    {{slide.title}}
                   </div>
                   <div class="banner-title home-slider-info-text" data-aos="zoom-in-left" data-aos-duration="1000">
-                    {{slide.title_2}}
+                    {{slide.sub_title}}
                   </div>
                   <div class="banner-text home-slider-info-text" data-aos="fade-down-left" data-aos-duration="1000">
-                    {{slide.description}}
+                    <p [innerHTML]="slide.description"></p>
+
                   </div>
                 </div>
                 <div class="col-md-6">

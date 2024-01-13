@@ -34,6 +34,8 @@ export class HomeComponent implements OnInit {
     // Add more items as needed
   ];
 
+  coverBanners: any
+
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
@@ -126,12 +128,21 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     Aos.init()
+    this.getServiceGroupCoverBanner();
     this.getServiceGroup()
   }
 
 
   scroll(el: any) {
     el.scrollIntoView({ behavior: "smooth" });
+  }
+
+  getServiceGroupCoverBanner() {
+    this.Service.getServiceGroupCoverBanner().toPromise().then((response: any) => {
+      this.coverBanners = response;
+      console.log(this.coverBanners, 'coverBanners data')
+      //this.promotionData = data;
+    })
   }
 
   getServiceGroup() {

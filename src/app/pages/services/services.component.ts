@@ -41,6 +41,8 @@ export class ServicesComponent implements OnInit, AfterViewInit, OnDestroy {
 
   slide: any = {};
 
+  coverBanners: any
+
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
@@ -69,6 +71,33 @@ export class ServicesComponent implements OnInit, AfterViewInit, OnDestroy {
       },
     },
     nav: false,
+  };
+
+  homebanner: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    autoplay: true,
+    navSpeed: 1000,
+    navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+    animateOut: 'slideOutUp',
+    responsive: {
+      0: {
+        items: 1,
+      },
+      400: {
+        items: 1,
+      },
+      740: {
+        items: 1,
+      },
+      940: {
+        items: 1,
+      },
+    },
+    nav: true
   };
 
   private subscription: Subscription | undefined;
@@ -103,6 +132,9 @@ export class ServicesComponent implements OnInit, AfterViewInit, OnDestroy {
         .then((response: any) => {
           this.servicegroup = response;
           console.log(this.servicegroup, 'data');
+
+          this.coverBanners = this.servicegroup.filter((banner) => banner.section_type === "Cover Banner");
+
           this.setDefaultTabData();
           this.changeCover();
         });
@@ -192,6 +224,16 @@ export class ServicesComponent implements OnInit, AfterViewInit, OnDestroy {
     this.serviceList_des = getList.description;
   }
 
+  onSlideChanged(event: any): void {
+    var homeSliderInfo = document.querySelectorAll('.home-slider-info-text');
+    homeSliderInfo.forEach(async (sliderInfo, index) => {
+      sliderInfo.classList.add('aos-animate');
+      // Use 'await' to introduce a delay of 3 seconds
+      await this.delay(4);
+      sliderInfo.classList.remove('aos-animate');
+
+    });
+  }
 
 
 }

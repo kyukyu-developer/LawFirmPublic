@@ -43,7 +43,7 @@
     font-size: 27px;
     font-weight: 600;
     margin: 30px 0;
-    text-shadow: 2px 2px #bd9d4f;
+    //text-shadow: 2px 2px #bd9d4f;
   }
 
 
@@ -507,12 +507,12 @@ ul li[style] {
 
 }
 
-.pd-left{
-  padding-left:100px;
+.pd-left {
+  padding-left: 100px;
 }
 
-.home-about{
-  font-size:14px;
+.home-about {
+  font-size: 14px;
 }
 
 table {
@@ -525,7 +525,8 @@ table {
   color: #000000;
 }
 
-table td, table th {
+table td,
+table th {
   border-width: 2px;
   border-color: #7EA8F8;
   border-style: solid;
@@ -538,27 +539,33 @@ table thead {
 
 
 @media only screen and (max-width: 768px) {
-  .tabs span{
+  .tabs span {
     padding: 10px;
   }
-  .phonecontact{
-    padding:20px 10px;
-  }
-.pd-left{
-padding-left:0;
-}
-  .page_banner{
-    height:50vh;
-}
-.decoration_wrap{
-    width:100%;
-}
-.img-container{
-  width:100%;
-  height:400px;
-  img{
-    width:100%;
 
+  .phonecontact {
+    padding: 20px 10px;
   }
-}
+
+  .pd-left {
+    padding-left: 0;
+  }
+
+  .page_banner {
+    height: 50vh;
+  }
+
+  .decoration_wrap {
+    width: 100%;
+  }
+
+  .img-container {
+    width: 100%;
+    height: 400px;
+
+    img {
+      width: 100%;
+
+    }
+  }
 }

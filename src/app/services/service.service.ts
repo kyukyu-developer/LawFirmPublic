@@ -17,10 +17,14 @@ export class ServiceGroup {
     return this.shared_.getRequest('public/service/servicegroup');
   }
 
+  public getServiceGroupCoverBanner() {
+    return this.shared_.getRequest('public/service/servicegroup/coverbanner');
+  }
+
   getSingleService(param: any) {
     return this.shared_.getRequest('public/service/sections/' + param);
   }
 
 
-  
+
 }
