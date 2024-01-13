@@ -1306,75 +1306,91 @@ a.custom-link::after {
   display: none;
 }
 
-#founder-section{
-  justify-content:left;
-  display:flex;
+#founder-section {
+  justify-content: left;
+  display: flex;
   align-items: top
 }
 
-.founderr{
-  margin-bottom:80px;
+.founderr {
+  margin-bottom: 80px;
 }
 
 @media only screen and (max-width: 768px) {
-  .about-law.slide-section{
-    margin-bottom:50px;
+  .about-law.slide-section {
+    margin-bottom: 50px;
   }
-  .sliderr-row{
-    margin-top:50px;
+
+  .sliderr-row {
+    margin-top: 50px;
   }
-    .cover-background{
-      height:70vh;
-      margin-bottom:100px;
-    }
-    .law-video{
-      margin-top:90px;
-    }
-  .founderr{
-    margin-bottom:0;
+
+  .cover-background {
+    height: 70vh;
+    margin-bottom: 100px;
   }
-  .blue-section{
-    padding-top:0;
+
+  .law-video {
+    margin-top: 90px;
   }
-  nav.tabs{
+
+  .founderr {
+    margin-bottom: 0;
+  }
+
+  .blue-section {
+    padding-top: 0;
+  }
+
+  nav.tabs {
     justify-content: center;
     display: flex;
-    
-  }
-  .tabs a{
-    padding: 13px 20px;
-  }
-  #founder-section{
-    display:block;
-  }
-  .one{
-    position:relative;
-    width:80%;
-  }
-  .three{
-    width:85%;
 
   }
-  .two{
-    width:67%;
-    right:0;
+
+  .tabs a {
+    padding: 13px 20px;
   }
-  .about-law{
-    .slide-section{
-      margin-bottom:95px;
+
+  #founder-section {
+    display: block;
+  }
+
+  .one {
+    position: relative;
+    width: 80%;
+  }
+
+  .three {
+    width: 85%;
+
+  }
+
+  .two {
+    width: 67%;
+    right: 0;
+  }
+
+  .about-law {
+    .slide-section {
+      margin-bottom: 95px;
     }
   }
-  .why-us-card{
-    padding:0;
+
+  .why-us-card {
+    padding: 0;
     background-color: transparent;
   }
-  blockquote{
-    padding:0;
+
+  blockquote {
+    padding: 0;
   }
-  .careline-card{
-    margin-bottom:80px !important;
+
+  .careline-card {
+    margin-bottom: 80px !important;
   }
-  .number-blk{
-    margin-bottom:20px;
+
+  .number-blk {
+    margin-bottom: 20px;
   }
 }
