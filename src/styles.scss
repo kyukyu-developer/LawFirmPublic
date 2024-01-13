@@ -3,44 +3,74 @@
 @import "../src/assets/theme/variable.scss";
 @import 'animate.css/animate.min.css';
 
-p{
-    font-size:13px;
+p {
+  font-size: 14px;
 }
 
-h3{
-    font-size:22px;
+h3 {
+  font-size: 22px;
 }
 
 .owl-carousel {
-	position: relative;
-	height: 100%;
-	
-	// div:not(.owl-controls) {
-	// 	height: 100%;
-	// }
-	
-	.owl-slide {
-		background-image: url('https://images.unsplash.com/photo-1437915015400-137312b61975?fit=crop&fm=jpg&h=800&q=80&w=1200');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-	}
-	
-	div.owl--text {
-		position: absolute;
-		bottom: 4em;
-		left: 2em;
-		width: 20em;
-		height: 8em;
-		padding: 1em;
-		background: rgba(255, 255, 255, .5);
-		border-radius: 4px;
-	}
-	
+  position: relative;
+  height: 100%;
+
+  // div:not(.owl-controls) {
+  // 	height: 100%;
+  // }
+
+  .owl-slide {
+    background-image: url('https://images.unsplash.com/photo-1437915015400-137312b61975?fit=crop&fm=jpg&h=800&q=80&w=1200');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  div.owl--text {
+    position: absolute;
+    bottom: 4em;
+    left: 2em;
+    width: 20em;
+    height: 8em;
+    padding: 1em;
+    background: rgba(255, 255, 255, .5);
+    border-radius: 4px;
+  }
+
 }
 
 @media only screen and (max-width: 768px) {
-	.owl-carousel{
-		height: 400px;
-	}
+  .owl-carousel {
+    height: 400px;
+  }
+}
+
+
+table {
+  width: 100%;
+  background-color: #212121;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: #bd9d4f;
+  border-style: solid;
+  color: #fff;
+}
+
+table td,
+table th {
+  border-width: 2px;
+  border-color: #bd9d4f;
+  border-style: solid;
+  padding: 5px;
+}
+
+table td {
+  p {
+    margin-bottom: 0;
+    padding: 11px 0 11px 11px;
+  }
+}
+
+table thead {
+  background-color: #7EA8F8;
 }

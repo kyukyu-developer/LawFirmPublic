@@ -7,7 +7,6 @@
 
 }
 
-
 .home-slider {
   background-color: #000000;
   height: 100vh !important;
@@ -40,10 +39,15 @@
   }
 
   .banner-title {
-    font-size: 27px;
+    font-size: 40px;
     font-weight: 600;
     margin: 30px 0;
     //text-shadow: 2px 2px #bd9d4f;
+  }
+
+  .banner-text {
+    font-size: 20px;
+    //text-shadow: 1px 1px #bd9d4f;
   }
 
 
@@ -200,7 +204,7 @@ h3.contact::after {
 }
 
 h3 {
-  font-size: 22px;
+  font-size: 25px;
 }
 
 .service {
@@ -253,7 +257,7 @@ ul.service-list {
 
 
 .subtitle {
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 400;
   padding-bottom: 16px;
 }
@@ -278,7 +282,7 @@ ul.legal-advice {
 }
 
 h4.section-title {
-  font-size: 1.1rem;
+  font-size: 23px; // 1.1rem;
 }
 
 span.cea-button-text {
@@ -373,16 +377,16 @@ span.cea-button-num {
 
   h3 {
     margin-bottom: 20px;
-    font-size: 22px;
+    font-size: 25px;
   }
 
   p.middle-title {
-    font-size: 20px;
+    font-size: 25px;
     margin-bottom: 30px;
   }
 
   p {
-    font-size: 13px;
+    font-size: 15px;
   }
 }
 
